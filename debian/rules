@@ -1,0 +1,76 @@
+#!/usr/bin/make -f
+include /usr/share/dpkg/default.mk
+SHELL := /bin/zsh --extendedglob
+
+CMAKE_BUILD_TYPE = Release
+CMAKE_FLAGS :=
+CMAKE_INSTALL_PREFIX = /usr
+DEPS_BUILD_DIR := .deps
+NVIM_PRG := nvim
+USE_BUNDLED := ON
+CMAKE_EXTRA_FLAGS := -DCMAKE_C_FLAGS=-O3
+
+DEPS_CMAKE_FLAGS += -DUSE_BUNDLED_BUSTED=OFF
+#DEPS_CMAKE_FLAGS += -DUSE_BUNDLED_LIBTERMKEY=ON
+#DEPS_CMAKE_FLAGS += -DUSE_BUNDLED_LIBVTERM=ON
+DEPS_CMAKE_FLAGS += -DUSE_BUNDLED_LUAROCKS=OFF
+#DEPS_CMAKE_FLAGS += -DUSE_BUNDLED_TS=ON
+#DEPS_CMAKE_FLAGS += -DUSE_BUNDLED_TS_PARSERS=ON
+#DEPS_CMAKE_FLAGS += -DUSE_BUNDLED_UNIBILIUM=ON
+#DEPS_CMAKE_FLAGS += -DUSE_BUNDLED_UTF8PROC=ON
+#DEPS_CMAKE_FLAGS += -DUSE_BUNDLED_LUV=OFF
+DEPS_CMAKE_FLAGS += -DUSE_EXISTING_SRC_DIR=ON
+
+DEPS_CMAKE_FLAGS += -DUSE_BUNDLED_GETTEXT=OFF
+DEPS_CMAKE_FLAGS += -DUSE_BUNDLED_GPERF=OFF
+DEPS_CMAKE_FLAGS += -DUSE_BUNDLED_LIBICONV=OFF
+DEPS_CMAKE_FLAGS += -DUSE_BUNDLED_LIBUV=OFF
+DEPS_CMAKE_FLAGS += -DUSE_BUNDLED_LUAJIT=OFF
+DEPS_CMAKE_FLAGS += -DUSE_BUNDLED_LUA=OFF
+#DEPS_CMAKE_FLAGS += -DPREFER_LUA=OFF
+TARGET_FLAGS := -Wno-dev
+ifneq (,$(findstring ok installed,$(shell dpkg-query -W -f '$${Status}' libmsgpack-dev 2>&1)))
+  DEPS_CMAKE_FLAGS += -DUSE_BUNDLED_MSGPACK=OFF
+endif
+
+ifeq ($(DEB_HOST_GNU_TYPE),aarch64-linux-gnu)
+    TARGET_FLAGS+='-Ofast -march=armv8-a+crypto+crc -mtune=cortex-a72' 
+endif
+
+DISTRIBUTION  = $(shell lsb_release -is | tr '[:upper:]' '[:lower:]')
+# export ARTIFACTS_DIR ?= ../out/$(DISTRIBUTION)/$(DEB_TARGET_ARCH)
+
+#$(foreach v, $(.VARIABLES), $(info $(v) = $($(v))))
+
+override_dh_auto_build:
+	rm -fR .deps
+	git -C deps clean -d -f -x
+	git clean -d -f -x
+	mkdir -p .deps/build
+	ln -s ../../deps/src .deps/build/src
+	dh_auto_build -a -- \
+		DEPS_CMAKE_FLAGS="$(DEPS_CMAKE_FLAGS) -Wno-dev" \
+		CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE) \
+		CMAKE_INSTALL_PREFIX="$(CMAKE_INSTALL_PREFIX)" \
+		CMAKE_EXTRA_FLAGS="$(CMAKE_EXTRA_FLAGS) -Wno-dev"
+
+override_dh_auto_install:
+	dh_auto_install
+	#rm -rf $(CURDIR)/debian/tmp/usr/share/nvim/runtime/doc
+	rm -rf $(CURDIR)/debian/tmp/usr/share/icons
+	rm -rf $(CURDIR)/debian/tmp/usr/share/nvim/runtime/print
+	rm -rf $(CURDIR)/debian/tmp/usr/share/nvim/runtime/tutor
+	/bin/zsh --extendedglob -c "rm -fr $(CURDIR)/debian/tmp/usr/share/locale/^(uk|en_GB)"
+	/bin/zsh --extendedglob -c "rm -fr $(CURDIR)/debian/tmp/usr/share/nvim/runtime/keymap/^accents.vim"
+
+
+override_dh_auto_test:
+	build/bin/nvim --version
+	build/bin/nvim --headless -u NONE -i NONE -c ':quit'
+
+#override_dh_builddeb:
+#	mkdir -p $(ARTIFACTS_DIR)
+#	dh_builddeb $@ --destdir=$(ARTIFACTS_DIR)
+
+%:
+	dh $@

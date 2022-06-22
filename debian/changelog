@@ -1,0 +1,5185 @@
+neovim (0.8.0+git20220621221508-14c640cbe-ea75e83d5) jammy; urgency=medium
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+  * local
+
+  [ bfredl ]
+  * perf(ui): reduce allocation overhead when encoding "redraw" events
+
+  [ zeertzjq ]
+  * vim-patch:8.2.5138: various small issues
+
+  [ Zaz Brown ]
+  * refactor(provider): use list comprehension #19027
+
+  [ Gregory Anders ]
+  * feat(api): add "buf" and "win" to nvim_get_option_value
+  * refactor: use nvim_{get,set}_option_value for vim.{b,w}o
+
+  [ Christian Clason ]
+  * vim-patch:d799daa660b8 (#19031)
+
+  [ eyalk11 ]
+  * docs(deprecated): alternatives for $NVIM_LISTEN_ADDRESS
+
+  [ Jonas Strittmatter ]
+  * refactor(runtime): refactor filetype.lua (#18813)
+
+  [ Dundar Goc ]
+  * build(cmake): use glob_wrapper instead of file(GLOB in main CMakeLists
+
+  [ Lewis Russell ]
+  * refactor(option): DRY get/set option value #19038
+
+ -- Qosmio <datapronix@protonmail.com>  Tue, 21 Jun 2022 22:15:11 -0400
+
+neovim (0.8.0+git20220619220808-dd25ec07f-80bbae032) jammy; urgency=medium
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+  * local
+
+  [ Justin M. Keyes ]
+  * fix(ci): noisy logs, unreliable test #19019
+
+  [ Christian Clason ]
+  * ci(release): skip CoreServices system library on macOS (#19021)
+
+  [ Kevin Sicong Jiang ]
+  * fix(tui): piping nodejs to nvim breaks input handling #18932
+
+  [ Dundar Goc ]
+  * build(cmake): remove unnecessary *-prereqs targets
+  * build(cmake): remove unnecessary globbing with file
+  * build(cmake): simplify and speed up the uninstall target
+  * build(cmake): simplify def_cmd_target function
+  * build: remove FindLua.cmake since it's already built into cmake
+
+  [ ii14 ]
+  * fix(decorations): nvim_buf_set_extmark breaks conceal #19010
+
+ -- Qosmio <datapronix@protonmail.com>  Sun, 19 Jun 2022 22:08:12 -0400
+
+neovim (0.8.0+git20220618161315-aea9a93b0-c9154d40e) jammy; urgency=medium
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+  * local
+
+  [ Justin M. Keyes ]
+  * feat(logging): include test-id in log messages
+  * test(report): formatting, drop dumplog()
+  * feat(server): instance "name", store pipes in stdpath(state)
+
+  [ zeertzjq ]
+  * fix(lua): clear got_int when calling vim.on_key() callback (#18979)
+
+  [ Christian Clason ]
+  * vim-patch:8.2.5110: icon filetype not recognized from the first line (#18987)
+
+  [ kevinhwang91 ]
+  * fix(treesitter): new iter if folded
+
+  [ zeertzjq ]
+  * docs: improve 'insertmode' emulation #18962
+
+  [ Lewis Russell ]
+  * test(treesitter): add benchmark #18989
+
+  [ Oliver Marriott ]
+  * fix(hl): return cterm fg/bg even if they match Normal #18981
+
+  [ Christian Clason ]
+  * vim-patch:d592deb33652 (#19002)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.5116: "limit" option of matchfuzzy() not always respected (#19005)
+  * vim-patch:8.2.5120: searching for quotes may go over the end of the line
+  * vim-patch:8.2.5121: interrupt test sometimes fails
+
+  [ Oliver Marriott ]
+  * fix(highlight): use ctermbg/fg instead of bg/fg when use_rgb=false #18982
+
+  [ Justin M. Keyes ]
+  * fix(logging): try harder to resolve Nvim "name" #19016
+  * fix(terminal): coverity USE_AFTER_FREE #18978
+  * build(lint): set some linters as non-fatal #19018
+
+ -- Qosmio <datapronix@protonmail.com>  Sat, 18 Jun 2022 16:13:23 -0400
+
+neovim (0.8.0+git20220616011239-a3cf4bc41-1229452c4) jammy; urgency=medium
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+  * local
+
+  [ dundargoc ]
+  * docs: fix typos (#18866)
+
+  [ zeertzjq ]
+  * test: correct check for v:errmsg in inccommand test (#18968)
+
+  [ Christian Clason ]
+  * vim-patch:8c1b8cb2e0b5 (#18966)
+
+  [ zeertzjq ]
+  * fix(ui): do not call showmode() when setting window height (#18969)
+  * vim-patch:8.2.5097: using uninitialized memory when using 'listchars' (#18974)
+
+  [ Justin M. Keyes ]
+  * refactor(log): use msg_schedule_semsg #18950
+
+  [ notomo ]
+  * fix(lua): highlight.on_yank can close timer in twice #18976
+
+ -- Qosmio <datapronix@protonmail.com>  Thu, 16 Jun 2022 01:12:42 -0400
+
+neovim (0.8.0+git20220614192434-feadb96d1-eda4742a7) jammy; urgency=medium
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+  * local
+
+  [ Christian Clason ]
+  * vim-patch:partial:63f32603789d (#18916)
+
+  [ zeertzjq ]
+  * fix(input): fix macro recording with ALT and special key (#18917)
+
+  [ Dundar Goc ]
+  * refactor: change type of linenr_T from long to int32_t
+
+  [ zeertzjq ]
+  * vim-patch:8.2.5076: unnecessary code (#18922)
+  * fix(inccommand): clear cmdpreview state if preview is not shown (#18923)
+
+  [ bfredl ]
+  * feat(api): nvim__get_runtime do_source
+  * fix(messages): add color when showing nvim_echo in :messages history
+
+  [ zeertzjq ]
+  * fix(substitute): subtract number of backslashes later
+  * vim-patch:8.2.5078: substitute test has a one second delay
+
+  [ bfredl ]
+  * refactor(api): move option code to own file
+  * refactor(api): move extmark specific functions to api/extmark.c
+  * refactor(api): move command related API to separate file
+  * refactor(api): update vimdoc
+
+  [ dundargoc ]
+  * feat(contrib): asan debugging script #18892
+
+  [ Famiu Haque ]
+  * fix(inccommand): skip split window if not enough room #18937
+
+  [ zeertzjq ]
+  * fix(buffer): disable buffer-updates before removing from window #18933
+
+  [ Justin M. Keyes ]
+  * build(lint): fix luacheck not found #18940
+
+  [ dundargoc ]
+  * build: remove CMAKE_CROSSCOMPILING code #18914
+
+  [ Daniel Hahler ]
+  * test: dismiss quit_more from Lua #11226
+
+  [ Justin M. Keyes ]
+  * build(lint): fix lintuncrustify #18945
+
+  [ zeertzjq ]
+  * vim-patch:8.2.5079: DirChanged autocommand may use freed memory
+  * vim-patch:8.2.5081: autocmd test fails on MS-Windows
+  * vim-patch:8.2.5083: autocmd test still fails on MS-Windows
+
+  [ bfredl ]
+  * fix(tests): check for EOF on exit of nvim properly
+
+  [ Shougo ]
+  * feat: cmdheight=0 #16251
+
+  [ kylo252 ]
+  * fix(tests): missing clear() #18927
+
+  [ zeertzjq ]
+  * vim-patch:8.2.0577: not all modifiers supported for :options (#18952)
+
+  [ rhcher ]
+  * feat(lsp): sort codelens if multiple item per line (#18951)
+
+  [ zeertzjq ]
+  * fix(inccommand): never preview if parsing command failed (#18944)
+
+  [ Christian Clason ]
+  * vim-patch:6ba83ba9ee29 (#18948)
+
+  [ bfredl ]
+  * perf(memory): use an arena for RPC decoding
+
+  [ dundargoc ]
+  * refactor: enable -Wconversion warning for eval.c (#18448)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.1897: command modifiers are saved and set inconsistently
+  * refactor(api): remove redundant fields of CmdParseInfo
+  * vim-patch:8.2.1898: command modifier parsing always uses global cmdmod
+  * vim-patch:8.2.5088: value of cmod_verbose is a bit complicated to use
+
+ -- Qosmio <datapronix@protonmail.com>  Tue, 14 Jun 2022 19:24:38 -0400
+
+neovim (0.8.0+git20220609170234-847ee0cc4-8733f00c4) jammy; urgency=medium
+
+  * add deb packaging
+  * latest upstream
+  * local
+
+ -- Qosmio <datapronix@protonmail.com>  Thu, 09 Jun 2022 17:03:32 -0400
+
+neovim (0.8.0+git20220609142909-b787fff68-8883d26cb) jammy; urgency=medium
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+  * local
+
+  [ Dundar Goc ]
+  * ci(api-docs): show required changes with color
+
+  [ Justin M. Keyes ]
+  * refactor(log): simplify log_path_init #18898
+
+  [ mohsen ]
+  * fix(diagnostic): check for negative column value (#18868)
+
+  [ James McCoy ]
+  * test(ts): skip test if C parser is not available
+
+  [ Javier Lopez ]
+  * fix(terminal): scrollback delete lines immediately #18832
+
+  [ James McCoy ]
+  * ci: run tests with no treesitter parsers installed
+  * test: allow running CI without ts parsers installed
+
+  [ kylo252 ]
+  * feat(autocmds): retrieve lua callback (#18642)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.5066: lcs-leadmultispace
+  * vim-patch:8.2.5070: unnecessary code
+
+  [ resolritter ]
+  * fix: correct nlua_wait error message #18867
+
+  [ fkm3 ]
+  * fix: segfault in find_tagfunc_tags #18841
+
+  [ Justin M. Keyes ]
+  * fix(tests): unreliable parser_spec #18911
+
+  [ dundargoc ]
+  * build: add a cmake target for all used linters #18543
+  * refactor(ops): doxygen docstrings #17743
+
+ -- Qosmio <datapronix@protonmail.com>  Thu, 09 Jun 2022 14:29:14 -0400
+
+neovim (0.8.0+git20220608075413-fcc91f413-d3ca9c8d0) jammy; urgency=medium
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+  * local
+
+  [ zeertzjq ]
+  * fix(input): allow Ctrl-C to interrupt a recursive mapping even if mapped (#18885)
+
+  [ zbirenbaum ]
+  * fix(highlight): let winhighlight use cursor
+
+  [ Christian Clason ]
+  * vim-patch:partial:016188fd8a30 (#18890)
+
+  [ Sean Dewar ]
+  * fix(eval/f_getmatches): return empty list for invalid win argument (#18893)
+
+  [ Famiu Haque ]
+  * fix(nvim_create_user_command): make `smods` work with `nvim_cmd`
+
+ -- Qosmio <datapronix@protonmail.com>  Wed, 08 Jun 2022 07:54:16 -0400
+
+neovim (0.8.0+git20220606213345-6ce5c4dae-a9b85adc7) jammy; urgency=medium
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+  * local
+
+  [ zeertzjq ]
+  * vim-patch:8.2.5058: input() does not handle composing characters properly (#18872)
+
+  [ Javier Lopez ]
+  * docs: documenting struct members inline #18783
+
+  [ Jonas Strittmatter ]
+  * refactor(runtime): port remaining patterns from filetype.vim to filetype.lua (#18814)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.5064: no test for what 8.1.0052 fixes (#18881)
+
+ -- Qosmio <datapronix@protonmail.com>  Mon, 06 Jun 2022 21:33:48 -0400
+
+neovim (0.8.0+git20220605173625-cbef1193c-5890798ff) jammy; urgency=medium
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+  * local
+
+  [ Lewis Russell ]
+  * feat(lua): allow some viml functions to run in fast
+  * fixup: update test/functional/lua/vim_spec.lua
+
+  [ kylo252 ]
+  * refactor: missing parenthesis may cause unexpected problems (#17443)
+
+  [ Dundar Göc ]
+  * refactor(normal): convert function comments to doxygen format
+
+  [ Mathias Fußenegger ]
+  * feat(lsp): turn rename filter into a predicate (#18745)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.5024: using freed memory with "]d" (#18762)
+
+  [ Famiu Haque ]
+  * fix(ui): require window-local value to show winbar on floating windows (#18773)
+
+  [ Jun-ichi TAKIMOTO ]
+  * test(unit): use setup()/teardown() in buffer_spec.lua (#18739)
+
+  [ zeertzjq ]
+  * fix(winbar): fix winbar disappear or glitch when moving a split (#18775)
+
+  [ dundargoc ]
+  * docs(options): move all removed options to vim_diff.txt (#18770)
+
+  [ Famiu Haque ]
+  * fix(winbar): only allow adding winbar when there is space
+
+  [ zeertzjq ]
+  * refactor(regexp_nfa.c): match where Vim calls fopen() (#18778)
+
+  [ Lewis Russell ]
+  * fix(treesitter): offset directive associates range with capture (#18276)
+
+  [ Justin M. Keyes ]
+  * fix(vim-patch.sh)
+
+  [ Javier Lopez ]
+  * test: fixeol cleanup created files #18785
+
+  [ James McCoy ]
+  * ci: use ubuntu-latest for vim-patches and coverity-scan
+
+  [ Dundar Goc ]
+  * ci(api-docs): run in drafts as well
+
+  [ zeertzjq ]
+  * vim-patch:8.2.5037: cursor position may be invalid after "0;" range (#18782)
+
+  [ dundargoc ]
+  * ci(uncrustify): show diff on failure #18780
+
+  [ Famiu Haque ]
+  * feat(nvim_create_user_command): pass structured modifiers to commands
+
+  [ zeertzjq ]
+  * test(job_spec): remove Xtest_jobstart_env log file
+  * fix(winbar): set w_winrow_off when initializing firstwin size (#18793)
+  * test: add tests for inccommand with c_CTRL-R_= and c_CTRL-\_e (#18796)
+
+  [ bfredl ]
+  * refactor(api): use hashy hash for looking up api method and event names
+
+  [ kylo252 ]
+  * docs(clang-format): one space in directives indent (#18800)
+
+  [ Justin M. Keyes ]
+  * fix(logging): skip recursion, fix crash #18764
+
+  [ bfredl ]
+  * fix(docs): correct obsolete note about 'writedelay' in dev docs
+
+  [ zeertzjq ]
+  * docs: clarify that nvim_strwidth counts control characters as one cell (#18802)
+
+  [ Christian Clason ]
+  * test(oldtest): disable legacy detect for filetype.lua
+  * feat(filetype): convert more patterns to filetype.lua
+
+  [ dundargoc ]
+  * docs(dev-style): remove rules covered by uncrustify #18767
+
+  [ Christian Clason ]
+  * build(deps): bump Luv to HEAD - 02d703b42 (#18808)
+
+  [ Chris Kipp ]
+  * fix(lsp): include cancellable in progress message table (#18809)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.5046: vim_regsub() can overwrite the destination (#18812)
+
+  [ Famiu Haque ]
+  * feat: add preview functionality to user commands
+
+  [ Javier Lopez ]
+  * refactor(checkhealth)!: rename to vim.health, move logic to Lua #18720
+
+  [ Gregory Anders ]
+  * feat(fs): add vim.fs.parents()
+  * feat(fs): add vim.fs.dirname()
+  * feat(fs): add vim.fs.basename()
+  * feat(fs): add vim.fs.dir()
+  * feat(fs): add vim.fs.find()
+  * feat(fs): add vim.fs.normalize()
+
+  [ zeertzjq ]
+  * fix(inccommand): do not try to preview an ambiguous command (#18827)
+  * refactor: correct comments and assertions about mapping rhs <Nop> (#18821)
+
+  [ Javier Lopez ]
+  * fix(checkhealth): skip vim.health #18816
+
+  [ dundargoc ]
+  * refactor(clang-tidy): remove nested redundant ifdefs #18811
+
+  [ zeertzjq ]
+  * fix(screen): restart win_update() if a decor provider changes signcols (#18768)
+
+  [ Fredrik Ekre ]
+  * fix(lsp): adjust offset encoding in lsp.buf.rename() (#18829)
+
+  [ zeertzjq ]
+  * fix(inccommand): avoid crash if callback changes inccommand option (#18830)
+
+  [ Dundar Goc ]
+  * ci(provider): skip installing perl provider on macOS
+
+  [ Wsevolod ]
+  * fix(lua): stop pending highlight.on_yank timer, if any (#18824)
+
+  [ Christian Clason ]
+  * build(deps): bump Luv to HEAD - 9f8038633 (#18834)
+
+  [ bfredl ]
+  * refactor(api): use a unpacker based on libmpack instead of msgpack-c
+
+  [ Christian Clason ]
+  * fix(treesitter): correct region for string parser (#18794)
+
+  [ bfredl ]
+  * fix(logging): make logmsg() thread-safe again
+  * fix(api): some robustness issues in api_parse_enter
+
+  [ Mathias Fußenegger ]
+  * feat(lsp): add a start function (#18631)
+
+  [ bfredl ]
+  * fix(log): back even again
+
+  [ kylo252 ]
+  * ci: use python3 explicitly to fix macos warnings #18837
+
+  [ Oliver Marriott ]
+  * fix(hl): set Normal hl group sg_attr value #18820
+
+  [ Mathias Fußenegger ]
+  * feat(lsp): send didChangeConfiguration after init (#18847)
+
+  [ Gregory Anders ]
+  * fix(filetype): fix typo in starsetf function (#18856)
+
+  [ dundargoc ]
+  * docs: fix typos (#18269)
+
+  [ Christian Clason ]
+  * vim-patch:8.2.5054: no good filetype for conf files similar to dosini (#18851)
+
+  [ zeertzjq ]
+  * fix(lsp): set buflisted before switching to buffer (#18854)
+
+  [ Christian Clason ]
+  * vim-patch:partial:cfa8f9a3f285 (#18858)
+
+  [ bfredl ]
+  * fix(startup): nvim with --clean should not load user rplugins
+
+  [ dundargoc ]
+  * docs: specify CMAKE_BUILD_TYPE=RelWithDebInfo in README (#18859)
+
+  [ bfredl ]
+  * perf(tests): don't invoke nvim_get_all_options_info until needed
+
+  [ zeertzjq ]
+  * fix(terminfo): disable smglr for vtpcon and conemu (#18855)
+
+  [ Mathias Fußenegger ]
+  * fix(lsp): fix multi client handling in code action (#18869)
+
+ -- Qosmio <datapronix@protonmail.com>  Sun, 05 Jun 2022 17:36:34 -0400
+
+neovim (0.8.0+git20220523043921-0132ad608-1dee35c65) jammy; urgency=medium
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+  * local
+
+  [ Gregory Anders ]
+  * refactor!: delete insertmode (#18547)
+
+ -- Qosmio <datapronix@protonmail.com>  Mon, 23 May 2022 04:40:10 -0400
+
+neovim (0.8.0+git20220522202122-a40aa6b4d-448d45368) jammy; urgency=medium
+
+  [ Qosmio ]
+  * 
+  * add deb packaging
+  * latest upstream
+  * local
+
+  [ ckipp01 ]
+  * docs(extmark): remove message about passing in id=0
+
+  [ dundargoc ]
+  * refactor: add warnings for deprecated functions (#18662)
+
+  [ kylo252 ]
+  * fix(autocmds): separate command from desc (#18617)
+
+  [ dundargoc ]
+  * ci: fix lint errors caused by missing includes (#18673)
+
+  [ bfredl ]
+  * fix(tests): fix some screen.lua warnings
+
+  [ devbhan singh ]
+  * feat(ui): clear message history explicitly with msg_history_clear event
+
+  [ zeertzjq ]
+  * vim-patch:8.1.0535: increment/decrement might get interrupted by updating folds
+  * vim-patch:8.2.4991: no test for hwat patch 8.1.0535 fixes
+
+  [ Brandon Simmons ]
+  * vim-patch:8.2.4987: after deletion a small fold may be closable (#18683)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4993: smart/C/lisp indenting is optional (#18684)
+
+  [ dundargoc ]
+  * docs: remove "Vi default" #18672
+
+  [ bfredl ]
+  * fix(ci): remove 2000ms blocking wait in many plugin/lsp_spec.lua tests
+
+  [ zeertzjq ]
+  * fix(folds): fix fold regression with :move (#18685)
+  * vim-patch:8.2.4935: with 'foldmethod' "indent" some lines not included in fold (#18694)
+
+  [ bfredl ]
+  * fix(tests): fix some issues with ui/inccommand_spec.lua causing slowness
+
+  [ dundargoc ]
+  * ci(commitlint): only trigger on PRs to master #18679
+
+  [ Daniel Steinberg ]
+  * fix(mksession): don't store floats in session #18635
+
+  [ bfredl ]
+  * fix(winbar): allow winbar to display the ruler
+
+  [ James McCoy ]
+  * fix(cid/352839): USE_AFTER_FREE in create_user_command #18669
+
+  [ dundargoc ]
+  * build(clint): remove redundant checks #18698
+
+  [ Jonas Strittmatter ]
+  * refactor(runtime): convert the remaining dist#ft functions to lua (#18623)
+
+  [ Gregory Anders ]
+  * fix(lsp): do not detach LSP servers on Windows #18703
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4996: setbufline() may change Visual selection
+  * vim-patch:8.2.5002: deletebufline() may change Visual selection
+  * vim-patch:8.2.5001: checking translations affects the search pattern history (#18709)
+
+ -- Qosmio <datapronix@protonmail.com>  Sun, 22 May 2022 20:21:26 -0400
+
+neovim (0.8.0+git20220521005433-7848a855c-6d8d83ceb) jammy; urgency=medium
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+  * local
+
+  [ Denys ]
+  * docs: correct description of LanguageTree:contains()
+  * refactor: simple logic in tree_contains()
+
+  [ zeertzjq ]
+  * fix(mouse): fix mouse drag position with winbar
+  * fix(mouse): fix mouse drag position with winbar or border in multigrid
+
+  [ Famiu Haque ]
+  * fix(ui): make `winbar` properly equalize window heights for local value
+  * fix: make `nvim_cmd` not suppress errors inside key mapping
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4980: when 'shortmess' contains 'A' loading session may still warn (#18636)
+
+  [ Fredrik Ekre ]
+  * fix(lsp): only send diagnostics from current buffer in code_action() (#18639)
+
+  [ James McCoy ]
+  * ci(coverity): model our allocation functions
+  * ci(coverity): annotate register_cfunc as leaking memory
+  * fix(cid/351940): free compl_arg in create_user_commands()'s error path exit
+  * fix(cid/348314): free user_copy, not user
+  * fix(cid/352782): assert str->items is non-NULL to hint static analyzers
+  * perf(cid/350479): avoid copying ExtmarkInfo when calling extmark_to_array()
+  * ci(coverity): run every day instead of once/week
+
+  [ Dundar Goc ]
+  * vim-patch:8.2.4985: PVS warns for possible array underrun
+  * refactor: move reverse_text to strings.c as it's a string operation
+
+  [ Famiu Haque ]
+  * fix: prevent crash when statusline expression sets value of 'winbar'
+
+  [ Christian Clason ]
+  * build(deps): bump LuaJIT to HEAD - 4ef96cff8 (#18656)
+
+  [ Jun-ichi TAKIMOTO ]
+  * fix(unittests): coredump when running unit tests #18663
+
+  [ Lewis Russell ]
+  * refactor: remove unused USE_WCHAR_FUNCTIONS #18618
+
+  [ dundargoc ]
+  * ci: lint with uncrustify #18563
+  * build(clint.py): remove rules for includes, whitespace, tabs #18611
+  * ci: bump github actions versions #18616
+
+ -- Qosmio <datapronix@protonmail.com>  Sat, 21 May 2022 00:54:37 -0400
+
+neovim (0.8.0+git20220518040118-849aaa073-c0e735567) jammy; urgency=medium
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+  * local
+
+  [ kevinhwang91 ]
+  * perf(_editor): no need to stop inside vim.defer_fn
+
+  [ Famiu Haque ]
+  * docs(api): update v:errmsg behavior #18593
+
+  [ dundargoc ]
+  * feat(lintcommit): remove "chore", add "dist" #18594
+
+  [ zeertzjq ]
+  * fix(health): correct shada file path #18603
+  * fix(terminal): do not trim whitespace that is actually in the terminal (#16423)
+
+  [ Jonas Strittmatter ]
+  * refactor(runtime): convert more dist#ft functions to lua (#18430)
+
+  [ Noval Maulana ]
+  * fix(health): handle non-existent log file #18610
+
+  [ Dundar Goc ]
+  * fix(PVS/V1028): prevent potential overflow
+  * fix(PVS/V547): "expression is always false"
+  * fix(PVS/V568): correct placement of ignore directive
+  * fix(PVS/V1044): suppress warning
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4975: recursive command line loop may cause a crash (#18614)
+  * test: unskip tests on Windows (#18600)
+
+ -- Qosmio <iphonesms@ymail.com>  Wed, 18 May 2022 04:02:04 -0400
+
+neovim (0.8.0+git20220517030908-7c1fd28c6-d0633a635) jammy; urgency=medium
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+  * local
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4951: smart indenting done when not enabled
+  * vim-patch:8.2.4953: with 'si' inserting '}' after completion goes wrong
+
+  [ Dundar Goc ]
+  * ci(clint): fix all pyright warnings
+  * ci(clint): remove check for include order
+
+  [ dundargoc ]
+  * refactor(uncrustify): enable formatting for regexp and indent files (#18549)
+
+  [ Christian Clason ]
+  * vim-patch:partial: 30ab04e16e1e (#18568)
+
+  [ dundargoc ]
+  * docs(nvim_set_keymap): specify that optional arguments defaults to false (#18177)
+  * build(gen_vimdoc): eliminate non-constant global variables (#17781)
+  * build: enable EXITFREE on Debug builds (#17783)
+  * fix PVS warnings (#18459)
+  * ci: enable tests on drafts as well #18566
+
+  [ Famiu Haque ]
+  * refactor(ui)!: link `VertSplit` to `Normal` by default
+
+  [ dundargoc ]
+  * ci(clint): remove clint.py line length check #18574
+
+  [ deforde ]
+  * fix(api): nvim_eval_statusline should validate input #18347
+
+  [ Oliver Marriott ]
+  * docs(api): nvim_set_hl attributes #18558
+
+  [ Marco Hinz ]
+  * ci(clint): remove checks for whitespace after comma/semicolon (#18584)
+
+  [ dundargoc ]
+  * ci: remove mingw job #18580
+
+  [ Marco Hinz ]
+  * feat(terminfo): bump built-in terminfo entries (#18570)
+
+  [ ii14 ]
+  * feat(lua): add traceback to vim.deprecate #18575
+
+  [ zeertzjq ]
+  * ci(coverity): correct cron job time #18590
+
+  [ Justin M. Keyes ]
+  * fix(version.c): mark N/A vim patches #18587
+
+  [ Dundar Goc ]
+  * refactor: replace char_u variables and functions with char
+
+  [ Joshua Cao ]
+  * feat(man.vim): list command flags in "gO" outline #17558
+
+  [ Gregory Anders ]
+  * docs: vim.regex is case sensitive by default (#18595)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4121: Visual test fails on MS-Windows
+  * vim-patch:8.2.4968: reading past end of the line when C-indenting
+  * vim-patch:8.2.4969: changing text in Visual mode may cause invalid memory access
+
+ -- Qosmio <datapronix@protonmail.com>  Tue, 17 May 2022 03:10:43 -0400
+
+neovim (0.8.0+git20220509145456-1b4e81707-1468896f0) hirsute; urgency=medium
+
+  * add deb packaging
+  * latest upstream
+  * local
+
+ -- Qosmio <builder@amd64>  Mon, 09 May 2022 19:14:29 -0400
+
+neovim (0.8.0+git20220504173645-709b86b12-5d3a19011) hirsute; urgency=medium
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+  * local
+
+  [ Marco Hinz ]
+  * fix(mac): use same $LANG fallback mechanism as Vim
+
+  [ kylo252 ]
+  * build: bump msgpack to 4.0.0
+
+  [ Dundar Goc ]
+  * build(gen_vimdoc): abort if doxygen version is too old
+
+  [ Famiu Haque ]
+  * fix(api): preserve `cmdmod` on `nvim_parse_cmd`
+
+  [ dundargoc ]
+  * vim-patch:8.2.3306: unexpected "No matching autocommands" (#17912)
+
+  [ Dundar Goc ]
+  * ci(gen_vimdoc): handle edge case when checking doxygen version
+
+  [ dundargoc ]
+  * vim-patch:8.2.1835: ":help ??" finds the "!!" tag (#18350)
+
+  [ Dundar Goc ]
+  * build(gen_vimdoc): print user's doxygen version if it's too old
+
+  [ Daniel Kempkens ]
+  * fix(mac): add CoreServices to flake.nix #18358
+
+  [ Christian Clason ]
+  * vim-patch:8.2.4855: robot files are not recognized (#18364)
+  * vim-patch:8.2.4857: Yaml indent for multiline is wrong (#18365)
+
+  [ James McCoy ]
+  * fix(filetype.lua): escape expansion of ~ when used as a pattern
+
+  [ hlpr98 ]
+  * feat(api): support handling stdin stream in remote ui
+
+  [ bfredl ]
+  * refactor(ui): simplify stdin handling
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4858: K_SPECIAL may be escaped twice
+  * test: add more tests for K_SPECIAL escaping in <Cmd> mapping
+  * fix(coverity): use xstrndup() instead of vim_strsave() (#18363)
+
+  [ Christian Clason ]
+  * vim-patch:8.2.4859: wget2 files are not recognized (#18385)
+
+  [ Dundar Goc ]
+  * refactor: replace char_u variables and functions with char
+
+  [ ii14 ]
+  * feat: add "prerelease" to version dict
+
+  [ zeertzjq ]
+  * ci(MinGW): run pacman -Syu twice (#18384)
+
+  [ Jose Alvarez ]
+  * fix(lsp): add missing bufnr argument (#18382)
+
+  [ Justin M. Keyes ]
+  * feat(server): set $NVIM, unset $NVIM_LISTEN_ADDRESS #11009
+
+  [ dundargoc ]
+  * feat(lua): vim.deprecate() #18320
+
+  [ Yatao Li ]
+  * feat(api/ui): win_extmarks
+
+  [ ii14 ]
+  * feat(lsp): add logging level "OFF" (#18379)
+
+  [ Thomas Vigouroux ]
+  * fix(treesitter): bump match limit up
+  * perf(treesitter): use a reuse list for query cursors
+
+  [ Jonas Strittmatter ]
+  * refactor(runtime): convert dist#ft functions to lua (#18247)
+
+  [ Gregory Anders ]
+  * fix(filetype): fixup scd filetype detection (#18403)
+
+  [ James McCoy ]
+  * refactor(lua): replace hard-coded gsub with vim.pesc() (#18407)
+
+  [ Christian Clason ]
+  * build(deps): bump LuaJIT to HEAD - 91bc6b8ad (#18378)
+
+  [ Famiu Haque ]
+  * feat(nvim_parse_cmd): add range, count, reg #18383
+
+  [ Dundar Goc ]
+  * refactor: replace char_u variables and functions with char
+  * refactor: replace char_u variables and functions with char
+
+ -- Qosmio <builder@amd64>  Wed, 04 May 2022 17:36:55 -0400
+
+neovim (0.8.0+git20220501164548-e60626f07-39bfb265e) hirsute; urgency=medium
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+  * local
+
+  [ Dundar Goc ]
+  * refactor: replace char_u variables and functions with char
+
+  [ zeertzjq ]
+  * chore(editorconfig): unset "charset" for *.vim and *.po files
+
+  [ Christian Clason ]
+  * docs: syntax is enabled by default (#17637)
+
+  [ William Boman ]
+  * fix(shared): avoid indexing unindexable values in vim.tbl_get() (#18337)
+
+ -- Qosmio <builder@amd64>  Sun, 01 May 2022 16:49:55 -0400
+
+neovim (0.8.0~ubuntu1+git20220430150730-f5c368da5-fa95c5d9a) hirsute; urgency=medium
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+  * local
+
+  [ Mathias Fußenegger ]
+  * feat(lsp): show feedback on empty hover response (#18308)
+
+  [ zeertzjq ]
+  * test: add test for <Cmd> mapping with character containing K_SPECIAL byte
+  * vim-patch:8.2.4845: duplicate code
+  * fix(input): only disable mapped CTRL-C interrupts when getting input (#18310)
+  * vim-patch:8.2.0144: some mapping code is not fully tested (#18313)
+
+  [ Fredrik Ekre ]
+  * feat(lsp): options to filter and auto-apply code actions (#18221)
+
+  [ Michael Lingelbach ]
+  * chore(lsp): remove capabilities sanitization (#17814)
+
+  [ kylo252 ]
+  * fix(handlers): more specific error messages (#16772)
+
+  [ Michael Lingelbach ]
+  * feat(lsp): add vim.lsp.buf.format (#18193)
+
+  [ zeertzjq ]
+  * fix(tui): disable extended keys before exiting alternate screen (#18318)
+  * vim-patch:8.1.2191: when using modifyOtherKeys CTRL-X mode may not work
+  * vim-patch:8.2.4848: local completion with mappings and simplification not working
+
+  [ dundargoc ]
+  * refactor: replace char_u variables and functions with char (#18288)
+
+  [ Famiu Haque ]
+  * feat(api): add `nvim_parse_cmdline`
+
+  [ Mathias Fußenegger ]
+  * feat(lsp): add async option to vim.lsp.buf.format (#18322)
+
+  [ Christian Clason ]
+  * vim-patch:8.2.4849: Gleam filetype not detected (#18326)
+
+ -- Qosmio <builder@amd64>  Sat, 30 Apr 2022 15:08:00 -0400
+
+neovim (0.8.0~ubuntu1+git20220429144852-7b7e43777-92be808dc) hirsute; urgency=medium
+
+  [ Dundar Göc ]
+  * refactor: replace char_u variables and functions with char
+
+  [ Dundar Goc ]
+  * refactor: add function xstrnsave
+  * build(clint): change shebang to python3
+  * build(clint): remove all python2-isms with pyupgrade
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4805: CurSearch used for all matches in current line
+  * vim-patch:8.2.4812: unused struct item
+
+  [ Christian Clason ]
+  * fix(ftdetect): source plugins in autogroup (#18237)
+
+  [ zeertzjq ]
+  * ci(backport): remove triggering by comment (#18210)
+
+  [ dundargoc ]
+  * docs: make docstring consistent with parameters #18178
+  * build(clang-format): align with project style #18192
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4808: unused item in engine struct
+  * vim-patch:8.2.4810: missing changes in one file
+  * vim-patch:8.2.4813: pasting text while indent folding may mess up folds
+  * vim-patch:8.2.4806: a mapping using <LeftDrag> does not start Select mode
+  * vim-patch:8.2.4818: no test for what 8.2.4806 fixes
+
+  [ sitiom ]
+  * fix(packaging): remove excess forward slash in Wix Patch (#18121)
+
+  [ casswedson ]
+  * ci: label all markdown edits as "documentation" #18120
+
+  [ Joel Bradshaw ]
+  * docs: clarify enhanced modifiers, SHIFT usage #18124
+
+  [ dundargoc ]
+  * build: bump Doxyfile to minimum required version 1.9.0 #18118
+  * fix/PVS #17863
+
+  [ zeertzjq ]
+  * perf: only redraw for CurSearch when it is currently in use
+
+  [ dundargoc ]
+  * refactor: add pure attribute to pure functions (#18165)
+  * refactor: enable Wconversion warning for diff (#18094)
+  * refactor: convert macros to all-caps (#17895)
+  * revert: "man.vim: Ensure 'modifiable' in man#init_pager" #17791
+
+  [ Dundar Goc ]
+  * refactor: replace char_u variables and functions with char
+
+  [ bfredl ]
+  * fix(ci): workaround bug in msgpackparse() on windows caused by api level bump
+
+  [ Gregory Anders ]
+  * fix: show autocmd output when F is in shortmess (#18251)
+
+  [ Dundar Goc ]
+  * refactor: enable Wconversion warning for tag
+
+  [ Christian Clason ]
+  * vim-patch:8.2.4826: .cshtml files are not recognized (#18259)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4760: using matchfuzzy() on a long list can take a while
+  * vim-patch:8.2.4765: function matchfuzzy() sorts too many items
+
+  [ Gregory Anders ]
+  * feat(tui): query terminal for CSI u support (#18181)
+
+  [ zeertzjq ]
+  * test: correct order of arguments to eq() and neq()
+
+  [ Dundar Goc ]
+  * refactor: enable -Wconversion warning for funcs.c and userfuncs.c
+
+  [ ii14 ]
+  * fix(lsp): fix unnecessary buffers being added on empty diagnostics (#18275)
+
+  [ kylo252 ]
+  * fix(build): missing definitions for sizeof macros #16393
+
+  [ Philip Linell ]
+  * feat(checkhealth): check for slow shell #17829
+
+  [ Andrey Mishchenko ]
+  * fix: has() should preserve v:shell_error #18280
+
+  [ erw7 ]
+  * refactor(terminal)!: drop winpty, require Windows 10 #18253
+
+  [ kylo252 ]
+  * refactor(build): remove unused includes #17078
+
+  [ dundargoc ]
+  * refactor: enable -Wconversion warning for ex_docmd.c (#18277)
+
+  [ Christian Clason ]
+  * vim-patch:ce001a337e28 (#18287)
+
+  [ Gregory Anders ]
+  * fix: suppress "is a directory" messages with shortmess 'F' (#18296)
+
+  [ zeertzjq ]
+  * vim-patch:8.1.2145: cannot map <C-H> when modifyOtherKeys is enabled
+  * test(old): revert changes from ed88ca75034a48916d165e88459c791c450df550
+  * feat(input): delay all simplifications
+  * vim-patch:8.1.2159: some mappings are listed twice
+  * vim-patch:8.1.2165: mapping test fails on Mac
+  * vim-patch:8.1.2167: mapping test fails on MS-Windows
+  * feat(edit): insert an unsimplified key using CTRL-SHIFT-V
+  * vim-patch:partial:8.2.0815: maparg() does not provide enough information for mapset()
+  * vim-patch:8.2.0839: dropping modifier when putting a character back in typeahead
+  * vim-patch:8.2.0851: can't distinguish <M-a> from accented "a" in the GUI
+  * vim-patch:8.2.0855: GUI tests fail because the test doesn't use a modifier
+  * vim-patch:8.2.0867: using \{xxx} for encoding a modifier is not nice
+  * revert: "refactor: Remove allow_keys global (#6346)"
+  * vim-patch:8.2.0916: mapping with partly modifyOtherKeys code does not work
+  * vim-patch:8.2.0919: merging modifier for modifyOtherKeys is done twice
+  * test: revert test and doc changes from #6724, add a test for #6716
+  * vim-patch:8.1.2346: CTRL-R CTRL-R doesn't work with modifyOtherKeys
+  * vim-patch:8.2.2728: special key names don't work if 'isident' is cleared
+  * vim-patch:8.2.3595: check for signed overflow might not work everywhere
+  * vim-patch:8.2.4504: when there is a partially matching map full map may not work
+  * vim-patch:8.2.4819: unmapping simplified keys also deletes other mapping
+  * vim-patch:8.2.4824: expression is evaluated multiple times
+  * vim-patch:8.2.4827: typo in variable name
+  * vim-patch:8.2.4828: fix for unmapping simplified key not fully tested
+  * vim-patch:8.2.4829: a key may be simplified to NUL
+  * vim-patch:8.2.4833: failure of mapping not checked for
+  * vim-patch:8.2.4837: modifiers not simplified when timed out
+  * feat(mappings): do not replace existing mapping for simplified form
+
+  [ Michael Lingelbach ]
+  * ci: remove mjlbach from reviewers (#18297)
+
+  [ zeertzjq ]
+  * fix(mappings): fix double-free when unmapping simplifiable Lua mapping
+
+  [ Dundar Goc ]
+  * refactor(uncrustify): disable formatting in problematic code sections
+  * refactor(uncrustify): format all c code under /src/nvim/
+  * refactor(uncrustify): change rules to better align with the style guide
+
+  [ zeertzjq ]
+  * feat(mappings): allow special keys and modifiers in <Cmd> mapping
+  * feat(mappings): do not simplify the rhs of a mapping
+
+ -- Dundar Göc <builder@amd64>  Fri, 29 Apr 2022 16:18:37 -0400
+
+neovim (0.7.0~ubuntu1+git20220423020702-9aad04dbf-c2f8d9e81) hirsute; urgency=medium
+
+  [ Diomendius ]
+  * docs(lua): fix, clarify Lua require() docs
+  * docs(lua): further improve Lua require() docs
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+  * local
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4722: ending recording with mapping records too much (#18060)
+  * vim-patch:8.2.4719: ">" marker sometimes not displayed in the jumplist (#18056)
+  * vim-patch:8.2.4723: the ModeChanged autocmd event is inefficient
+  * vim-patch:8.2.4728: no test that v:event cannot be modified
+
+  [ Christian Clason ]
+  * vim-patch:8.2.4729: HEEx and Surface templates do not need a separate filetype (#18065)
+
+  [ UnkwUsr ]
+  * docs: remove mentions of removed flag '#' in 'cpoptions' (#18064)
+
+  [ zeertzjq ]
+  * refactor(globals.h): avoid confusing comment placement (#18066)
+
+  [ Loong Wang ]
+  * feat(events): support SIGWINCH for Signal event #18029
+
+  [ zeertzjq ]
+  * feat(keymap): add F38-F63 keys (#17893)
+
+  [ Gregory Anders ]
+  * refactor!: rename nvim_add_user_command to nvim_create_user_command
+
+  [ zeertzjq ]
+  * fix(tui)!: remove `ESC NUL` forced escape (#17198)
+
+  [ Gregory Anders ]
+  * docs: update dev-api to include "create"
+
+  [ zeertzjq ]
+  * fix(events): make v:event readonly in more events (#18070)
+  * fix(vim-patch.sh): fix N/A files patterns (#18073)
+  * vim-patch:8.2.4714: using g:filetype_dat and g:filetype_src not tested
+  * vim-patch:8.2.4733: HEEx and Surface do need a separate filetype
+  * vim-patch:8.2.4734: getcharpos() may change a mark position (#18077)
+
+  [ Henry Fraser ]
+  * refactor(packaging): Windows: improve MSI, remove NSIS #18069
+
+  [ zeertzjq ]
+  * docs(term.txt): add documentation about TUI input (#18072)
+
+  [ Tony Fettes ]
+  * fix(lsp): pass offset_encoding in formatexpr() (#18084)
+
+  [ Christian Clason ]
+  * vim-patch:8.2.4737: // in JavaScript string recognized as comment (#18083)
+
+  [ zeertzjq ]
+  * test(old): fix mistakes in porting Vim patches 8.1.1362 and 8.1.1585 (#18080)
+  * vim-patch:8.2.4713: plugins cannot track text scrolling
+  * test: properly test WinScrolled event
+  * vim-patch:8.2.4739: accessing freed memory after WinScrolled autocmd event (#18090)
+  * vim-patch:8.2.3184: cannot add a digraph with a leading space
+  * vim-patch:8.2.3226: new digraph functions use old naming scheme
+  * vim-patch:8.2.3325: digraph test fails when LC_ALL is set to "C"
+  * vim-patch:partial:a2baa73d1d33
+  * refactor(digraph.c): add more const qualifiers
+  * test: unskip tests skipped in #14661
+
+  [ Anatolii Sakhnik ]
+  * fix(translation): po file for Ukrainian (#18100)
+
+  [ Sean Dewar ]
+  * vim-patch:8.2.3416: second error is reported while exception is being thrown
+  * vim-patch:8.2.3448: :endtry after function call that throws not found
+  * vim-patch:8.2.3470: crash with error in :catch and also in :finally
+  * refactor(ex_eval): cherry-pick CSF flags changes from v8.2.3099
+  * vim-patch:8.2.3478: still crash with error in :catch and also in :finally
+  * vim-patch:8.2.3480: test does not fail without the fix for a crash
+  * vim-patch:8.2.3486: illegal memory access with invalid sequence of commands
+  * vim-patch:8.2.3487: illegal memory access if buffer name is very long
+
+  [ Gregory Anders ]
+  * fix(api): correctly pass f-args for nvim_create_user_command (#18098)
+
+  [ Christian Clason ]
+  * fix(runtime): add syntax file for query (#18101)
+  * vim-patch:8.2.4746: supercollider filetype not recognized (#18102)
+
+  [ Dundar Göc ]
+  * refactor: add pure attribute to pure functions
+
+  [ Christian Clason ]
+  * vim-patch:8.2.4747: no filetype override for .sys files (#18105)
+
+  [ Fredrik Ekre ]
+  * fix(lsp): fix lookup of boolean values in workspace/configuration (#18026)
+
+  [ dundargoc ]
+  * vim-patch:8.2.4750: small pieces of dead code (#18113)
+  * docs: typo fixes (#17859)
+
+  [ bfredl ]
+  * NVIM 0.7
+  * version bump
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4752: wrong 'statusline' value can cause illegal memory access (#18117)
+
+  [ Charlie Groves ]
+  * chore: remove vestigial sfname freeing (#18123)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4762: using freed memory using synstack() and synID() in WinEnter (#18136)
+
+  [ Eden Zhang ]
+  * fix(paste): ignore mappings in Cmdline mode (#18114)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.0791: a second popup window with terminal causes trouble
+  * test: add a test for #18135
+
+  [ Christian Clason ]
+  * vim-patch:8.2.4766: KRL files using "deffct" not recognized (#18137)
+  * vim-patch:8.2.4767: openscad files are not recognized (#18138)
+
+  [ hlpr98 ]
+  * feat(api): ui options relevant for remote TUI
+
+  [ bfredl ]
+  * feat(api): add tests for setting terminal ui options
+
+  [ Famiu Haque ]
+  * feat(highlight): implement CurSearch highlight
+
+  [ Christian Clason ]
+  * vim-patch:8.2.4778: pacman files use dosini filetype (#18152)
+
+  [ dundargoc ]
+  * docs(terminal): correct sentence on how to enter terminal mode (#18146)
+
+  [ Gregory Anders ]
+  * fix(tui): update modifyOtherKeys reporting (#18158)
+
+  [ Christian Clason ]
+  * vim-patch:75ab590f8504 (#18170)
+
+  [ Famiu Haque ]
+  * feat: add `undo!`
+
+  [ Christian Clason ]
+  * vim-patch:8.2.4790: lilypond filetype not recognized (#18174)
+  * vim-patch:8.2.4781: Maxima files are not recognized
+  * vim-patch:8.2.4793: recognizing Maxima filetype even though it might be another
+
+  [ Gregory Anders ]
+  * fix(diagnostic): use nvim_exec_autocmds to trigger DiagnosticChanged (#18188)
+
+  [ runiq ]
+  * fix(lsp): unify progress message handling (#18040)
+
+  [ Mathias Fußenegger ]
+  * docs(api): add example showing necessity to wrap callback function (#18179)
+
+  [ Christian Clason ]
+  * docs(filetype): proper example for did_load_filetypes (#18191)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4795: 'cursorbind' scrolling depends on whether 'cursorline' is set
+  * vim-patch:8.2.4796: file left behind after running cursorline tests
+  * vim-patch:8.2.4801: fix for cursorbind fix not fully tested
+  * vim-patch:8.2.4724: current instance of last search pattern not easily spotted
+  * vim-patch:8.2.4797: getwininfo() may get oudated values
+  * vim-patch:8.2.0358: insufficient testing for indent.c
+  * vim-patch:8.2.4792: indent operator creates an undo entry for every line
+  * vim-patch:8.2.4794: compiler warning for not initialized variable
+
+  [ atusy ]
+  * docs: vim.keymap.set can specify buffer as an option
+
+  [ zeertzjq ]
+  * vim-patch:8.1.1756: autocommand that splits window messes up window layout
+  * vim-patch:8.2.2472: crash when using command line window in an autocommand
+  * vim-patch:8.2.2474: using freed memory when window is closed by autocommand
+  * vim-patch:8.2.2475: autocommand tests hangs on MS-Windows
+  * vim-patch:8.2.2476: using freed memory when splitting window while closing buffer
+  * vim-patch:8.2.2477: autocommand tests hang on MS-Windows
+  * vim-patch:8.2.4791: events triggered in different order when reusing buffer
+
+  [ Charlie Groves ]
+  * test: add a Lua functional test for NoName buffer event order
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4802: test is not cleaned up
+  * vim-patch:8.2.4759: CurSearch highlight does not work for multi-line match
+
+  [ dundargoc ]
+  * refactor(normal): fix most clint warnings (#18196)
+
+  [ Christian Clason ]
+  * chore: update inspect.lua to 3.1.3
+  * docs(lua): explain and link to lua patterns (#18206)
+
+  [ Chinmay Dalal ]
+  * fix(treesitter): create new parser if language is not the same as cached parser (#18149)
+
+  [ Andrey Mishchenko ]
+  * fix(lua): don't mutate opts parameter of vim.keymap.del (#18227)
+
+ -- Diomendius <builder@amd64>  Sat, 23 Apr 2022 02:12:24 -0400
+
+neovim (0.7.0~ubuntu1+git20220414011715-91a4848f5-89db687d0) hirsute; urgency=medium
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+
+  [ Lewis Russell ]
+  * feat(keymap): return nil from an expr keymap
+
+  [ Qosmio ]
+  * local
+
+  [ György Andorka ]
+  * refactor(api)!: use singular/plural consistently in the autocmd API
+
+  [ zeertzjq ]
+  * vim-patch:8.2.3122: with 'nowrap' cursor position is unexected in narrow window (#17935)
+  * refactor: remove redundant check for w_p_cole (#17944)
+
+  [ Lewis Russell ]
+  * fix(api): delete all autocmds with the same ID
+  * fix(keymap): don't coerce false to ''
+
+  [ zeertzjq ]
+  * vim-patch:8.2.3471: crash when using CTRL-T after an empty search pattern
+  * vim-patch:8.2.3472: other crashes with empty search pattern not tested
+  * vim-patch:8.2.3489: ml_get error after search with range
+  * vim-patch:8.2.4660: cursorcolumn is sometimes not correct
+  * test: add a test for #13916
+  * fix(input): do not translate scroll keys into multiclicks
+
+  [ Christian Clason ]
+  * vim-patch:8.2.4664: Elvish files are not recognized (#17963)
+  * docs(options): add missing 'nofoo' tags (#17965)
+  * docs(options): add more missing 'nofoo' tags (#17967)
+
+  [ Tony Chen ]
+  * fix(extmarks): splice extmarks on accepting spell
+
+  [ zeertzjq ]
+  * fix(ex_normal): spam \n in Ex mode only if in Cmdline mode (#17977)
+
+  [ Lewis Russell ]
+  * vim-patch:8.1.1687: the evalfunc.c file is too big (#17949)
+
+  [ Shougo ]
+  * [RFC] vim-patch:8.1.1378: delete() can not handle a file name that looks li… (#16268)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4672: using :normal with Ex mode may make :substitute hang (#17983)
+  * fix(substitute): properly check for empty command line
+  * test: add some tests with :normal and Ex mode
+
+  [ Brian Leung ]
+  * vim-patch:8.2.4639: not sufficient parenthesis in preprocessor macros
+  * vim-patch:8.2.4402: missing parenthesis may cause unexpected problems
+  * chore: update .git-blame-ignore-revs
+
+  [ zeertzjq ]
+  * test(old): fix test_regexp_latin.vim encoding (#17989)
+  * test(old): fix test_spell.vim encoding
+  * vim-patch:8.2.4247: stack corruption when looking for spell suggestions
+  * vim-patch:8.2.4258: Coverity warns for array overrun
+  * vim-patch:8.2.4253: using freed memory when substitute with function call
+  * refactor: pass "preview" to regtilde()
+  * test: move completion :stopinsert test to completion_spec.lua (#17992)
+
+  [ Miyelsh ]
+  * refactor(pos.h): remove unused include; make formatting consistent (#17892)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4687: "vimgrep /%v/ *" may cause a crash (#17995)
+  * vim-patch:8.2.{4692,4691,4690}: fix Insert mode <LeftDrag> mapping bug (#17999)
+
+  [ Famiu Haque ]
+  * fix(ui): make window resize commands manage cmdheight
+
+  [ bfredl ]
+  * fix(tests): update legacy tab switch test to be sane
+
+  [ KillTheMule ]
+  * fix(ui): inccomand performance degradation
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4696: delete() with "rf" argument does not report a failure (#18002)
+  * fix(autocmd): restore autocmd showing behavior
+  * vim-patch:8.2.0836: not all :cdo output is visible (#18007)
+
+  [ Christian Clason ]
+  * vim-patch:8.2.4701: Kuka Robot Language files not recognized (#18012)
+
+  [ zeertzjq ]
+  * fix(input): fix clearing of reg_executing
+  * fix(event-loop): check if executed register has ended
+  * vim-patch:8.2.4707: redrawing could be a bit more efficient (#18022)
+
+  [ Abraham Francis ]
+  * ci: add script to bump versions (#17884)
+
+  [ Christian Clason ]
+  * vim-patch:8.2.4708: PHP test files are not recognized (#18025)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4710: smart indenting does not work after completion (#18030)
+  * refactor(window): cherry-pick win_close_buffer() from Vim patch 8.1.1391
+  * vim-patch:8.2.0004: get E685 and E931 if buffer reload is interrupted
+  * vim-patch:8.2.4700: buffer remains active if WinClosed event throws an exception
+  * vim-patch:8.2.4706: buffer remains active with WinClosed and tabpages
+  * vim-patch:8.2.4704: using "else" after return or break increases indent (#18032)
+  * vim-patch:8.2.3925: diff mode confused by NUL bytes (#18033)
+  * vim-patch:8.2.4711: when 'insermode' is set :edit from <Cmd> mapping misbehaves
+  * test: add a test for #16823
+
+  [ Gregory Anders ]
+  * feat(api)!: pass args table to autocommand callbacks
+
+  [ Christian Clason ]
+  * build(deps): bump LuaJIT to HEAD - 5e3c45c43 (#18027)
+  * vim-patch:partial:cbaff5e06ec5 (#18042)
+
+  [ Sean Dewar ]
+  * vim-patch:partial:cbaff5e06ec5 (#18044)
+
+  [ Diomendius ]
+  * docs(lua): fix, clarify Lua require() docs
+  * docs(lua): further improve Lua require() docs
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+  * local
+
+  [ UnkwUsr ]
+  * docs: remove mentions of removed flag '#' in 'cpoptions' (#18064)
+
+  [ zeertzjq ]
+  * refactor(globals.h): avoid confusing comment placement (#18066)
+
+  [ Loong Wang ]
+  * feat(events): support SIGWINCH for Signal event #18029
+
+  [ zeertzjq ]
+  * feat(keymap): add F38-F63 keys (#17893)
+
+  [ Gregory Anders ]
+  * refactor!: rename nvim_add_user_command to nvim_create_user_command
+
+  [ zeertzjq ]
+  * fix(tui)!: remove `ESC NUL` forced escape (#17198)
+
+  [ Gregory Anders ]
+  * docs: update dev-api to include "create"
+
+  [ zeertzjq ]
+  * fix(events): make v:event readonly in more events (#18070)
+  * fix(vim-patch.sh): fix N/A files patterns (#18073)
+  * vim-patch:8.2.4714: using g:filetype_dat and g:filetype_src not tested
+  * vim-patch:8.2.4733: HEEx and Surface do need a separate filetype
+  * vim-patch:8.2.4734: getcharpos() may change a mark position (#18077)
+
+  [ Henry Fraser ]
+  * refactor(packaging): Windows: improve MSI, remove NSIS #18069
+
+  [ zeertzjq ]
+  * docs(term.txt): add documentation about TUI input (#18072)
+
+  [ Tony Fettes ]
+  * fix(lsp): pass offset_encoding in formatexpr() (#18084)
+
+  [ Christian Clason ]
+  * vim-patch:8.2.4737: // in JavaScript string recognized as comment (#18083)
+
+  [ zeertzjq ]
+  * test(old): fix mistakes in porting Vim patches 8.1.1362 and 8.1.1585 (#18080)
+  * vim-patch:8.2.4713: plugins cannot track text scrolling
+  * test: properly test WinScrolled event
+  * vim-patch:8.2.4739: accessing freed memory after WinScrolled autocmd event (#18090)
+  * vim-patch:8.2.3184: cannot add a digraph with a leading space
+  * vim-patch:8.2.3226: new digraph functions use old naming scheme
+  * vim-patch:8.2.3325: digraph test fails when LC_ALL is set to "C"
+  * vim-patch:partial:a2baa73d1d33
+  * refactor(digraph.c): add more const qualifiers
+  * test: unskip tests skipped in #14661
+
+  [ Anatolii Sakhnik ]
+  * fix(translation): po file for Ukrainian (#18100)
+
+  [ Sean Dewar ]
+  * vim-patch:8.2.3416: second error is reported while exception is being thrown
+  * vim-patch:8.2.3448: :endtry after function call that throws not found
+  * vim-patch:8.2.3470: crash with error in :catch and also in :finally
+  * refactor(ex_eval): cherry-pick CSF flags changes from v8.2.3099
+  * vim-patch:8.2.3478: still crash with error in :catch and also in :finally
+  * vim-patch:8.2.3480: test does not fail without the fix for a crash
+  * vim-patch:8.2.3486: illegal memory access with invalid sequence of commands
+  * vim-patch:8.2.3487: illegal memory access if buffer name is very long
+
+  [ Gregory Anders ]
+  * fix(api): correctly pass f-args for nvim_create_user_command (#18098)
+
+  [ Christian Clason ]
+  * fix(runtime): add syntax file for query (#18101)
+  * vim-patch:8.2.4746: supercollider filetype not recognized (#18102)
+  * vim-patch:8.2.4747: no filetype override for .sys files (#18105)
+
+ -- Diomendius <builder@amd64>  Thu, 14 Apr 2022 01:19:14 -0400
+
+neovim (0.7.0~ubuntu1+git20220405045018-8a3f2502e-72848005e) hirsute; urgency=medium
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+  * local
+
+  [ zeertzjq ]
+  * fix(input): do not translate scroll keys into multiclicks
+
+  [ Christian Clason ]
+  * vim-patch:8.2.4664: Elvish files are not recognized (#17963)
+  * docs(options): add missing 'nofoo' tags (#17965)
+  * docs(options): add more missing 'nofoo' tags (#17967)
+
+  [ zeertzjq ]
+  * fix(ex_normal): spam \n in Ex mode only if in Cmdline mode (#17977)
+
+  [ Lewis Russell ]
+  * vim-patch:8.1.1687: the evalfunc.c file is too big (#17949)
+
+  [ Shougo ]
+  * [RFC] vim-patch:8.1.1378: delete() can not handle a file name that looks li… (#16268)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4672: using :normal with Ex mode may make :substitute hang (#17983)
+  * fix(substitute): properly check for empty command line
+  * test: add some tests with :normal and Ex mode
+
+  [ Brian Leung ]
+  * vim-patch:8.2.4639: not sufficient parenthesis in preprocessor macros
+  * vim-patch:8.2.4402: missing parenthesis may cause unexpected problems
+  * chore: update .git-blame-ignore-revs
+
+  [ zeertzjq ]
+  * test(old): fix test_regexp_latin.vim encoding (#17989)
+  * test(old): fix test_spell.vim encoding
+  * vim-patch:8.2.4247: stack corruption when looking for spell suggestions
+  * vim-patch:8.2.4258: Coverity warns for array overrun
+  * vim-patch:8.2.4253: using freed memory when substitute with function call
+  * refactor: pass "preview" to regtilde()
+  * test: move completion :stopinsert test to completion_spec.lua (#17992)
+
+  [ Miyelsh ]
+  * refactor(pos.h): remove unused include; make formatting consistent (#17892)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4687: "vimgrep /%v/ *" may cause a crash (#17995)
+
+ -- Qosmio <cross@arm64>  Tue, 05 Apr 2022 04:51:09 -0400
+
+neovim (0.7.0~ubuntu1+git20220329231700-178035ddb-b96c06e92) hirsute; urgency=medium
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+
+  [ zeertzjq ]
+  * ci: remove src/nvim/**.lua from docgen pattern
+  * vim-patch:8.2.4591: cursor line not updated when a callback moves the cursor
+  * perf(screen): reduce cursorline redrawing when jumping around
+
+  [ Gregory Anders ]
+  * feat(tui): enable CSI u keys
+  * feat(runtime): include Lua in C++ ftplugin (#17843)
+
+  [ Dundar Göc ]
+  * fix(PVS/V1019): compound assignment expression is used inside condition
+
+  [ Michael Lingelbach ]
+  * feat: add vim.tbl_get (#17831)
+
+  [ Gregory Anders ]
+  * fix(tui): correct CSI sequence (#17844)
+
+  [ Christian Clason ]
+  * build(deps): bump luajit to commit e2c312e (#17111)
+
+  [ Jared Weakly ]
+  * fix(filetype.lua): always return a string in getline helper function (#17852)
+
+  [ Javier Lopez ]
+  * docs(api): improve autocommand docs (#17545)
+
+  [ dundargoc ]
+  * chore: fix typos (#17755)
+  * fix(clang/'Dead store'): do not assign endcol (#17788)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.3453: autocmd not executed when editing a directory (#17846)
+  * vim-patch:8.2.4626: Visual area not updated when removing sign in Visual mode (#17864)
+  * vim-patch:8.2.4281: using freed memory with :lopen and :bwipe
+  * vim-patch:8.2.4327: may end up with no current buffer
+  * fix(tui): avoid using uninitialized memory in kitty (#17866)
+
+  [ Dundar Göc ]
+  * vim-patch:8.2.3943: compiler warning from gcc for uninitialized variable
+
+  [ Javier López ]
+  * ci: automatic breaking change label
+
+  [ かわえもん ]
+  * docs(api): fix wrong documentation of `nvim_create_autocmd` (#17870)
+
+  [ Javier Lopez ]
+  * refactor!: rename nvim_do_autocmd to nvim_exec_autocmd (#17854)
+
+  [ Javier López ]
+  * ci(doc): improve missing docs workflow
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4631: crash when switching window in BufWipeout autocommand
+  * fix(tabpage): correct check for failure to close window
+  * docs: correct CursorMoved documentation (#17880)
+
+  [ Smitesh Patil ]
+  * fix(diagnostic): make `open_float` respect global diagnostic options (#17879)
+
+  [ Famiu Haque ]
+  * refactor: assume `STATUS_HEIGHT` to be 1 (#17804)
+
+  [ Dundar Göc ]
+  * ci(commitlint): use -u NONE instead of --clean
+
+  [ Justin M. Keyes ]
+  * feat(test): use nvim_exec in helpers.source() #16064
+  * docs: .git-blame-ignore-revs #16174
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4638: superfluous check if a redraw is needed for 'cursorline'
+  * vim-patch:8.2.4630: 'cursorline' not always updated with 'culopt' is "screenline"
+
+  [ casswedson ]
+  * ci: label changes to Makefiles as build
+
+  [ Jaehwang Jung ]
+  * fix(lsp): use "text" filetype for plaintext (#17898)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4640: some boolean options use "long" instead of "int" (#17896)
+  * docs: update hl-Whitespace documentation (#17901)
+
+  [ Lewis Russell ]
+  * vim-patch:8.2.4644: redrawing too often when 'relativenumber' is set (#17756)
+
+  [ zeertzjq ]
+  * fix(decorations): do not put empty virt_text (#17872)
+
+  [ dundargoc ]
+  * build(clint): link to wiki when accessing list_T internals directly (#17876)
+
+  [ Lewis Russell ]
+  * chore: add .mailmap (#17453)
+
+  [ dundargoc ]
+  * vim-patch:8.2.3551: checking first character of url twice (#17910)
+  * vim-patch:8.2.3449: sort fails if the sort compare function returns 999 (#17909)
+
+  [ zeertzjq ]
+  * fix(event-loop): duplicate display updating logic in vgetorpeek() (#17913)
+
+  [ dundargoc ]
+  * vim-patch:8.2.4473: Coverity warns for not checking return value of ftell() (#17914)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4646: using buffer line after it has been freed (#17907)
+  * vim-patch:8.1.0439: recursive use of getcmdline() still not protected (#17726)
+  * vim-patch:8.2.3110: a pattern that matches the cursor position is complicated
+  * docs(pattern.txt): cherry-pick latests changes from Vim runtime updates
+  * vim-patch:8.2.4592: search continues after giving E1204
+
+  [ Qosmio ]
+  * local
+
+ -- Qosmio <builder@amd64>  Tue, 29 Mar 2022 23:30:19 -0400
+
+neovim (0.7.0~ubuntu1+git20220327054859-237270999-10bed3328) hirsute; urgency=medium
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+
+  [ dundargoc ]
+  * fix(clang/'Dead store'): do not assign endcol (#17788)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.3453: autocmd not executed when editing a directory (#17846)
+  * vim-patch:8.2.4626: Visual area not updated when removing sign in Visual mode (#17864)
+  * vim-patch:8.2.4281: using freed memory with :lopen and :bwipe
+  * vim-patch:8.2.4327: may end up with no current buffer
+  * fix(tui): avoid using uninitialized memory in kitty (#17866)
+
+  [ Dundar Göc ]
+  * vim-patch:8.2.3943: compiler warning from gcc for uninitialized variable
+
+  [ Javier López ]
+  * ci: automatic breaking change label
+
+  [ かわえもん ]
+  * docs(api): fix wrong documentation of `nvim_create_autocmd` (#17870)
+
+  [ Javier Lopez ]
+  * refactor!: rename nvim_do_autocmd to nvim_exec_autocmd (#17854)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4631: crash when switching window in BufWipeout autocommand
+  * fix(tabpage): correct check for failure to close window
+  * docs: correct CursorMoved documentation (#17880)
+
+ -- Qosmio <builder@amd64>  Sun, 27 Mar 2022 05:50:44 -0400
+
+neovim (0.7.0~ubuntu1+git20220325170652-7c4075a05-c2f66a7e0) hirsute; urgency=medium
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+
+  [ zeertzjq ]
+  * ci: remove src/nvim/**.lua from docgen pattern
+  * vim-patch:8.2.4591: cursor line not updated when a callback moves the cursor
+  * perf(screen): reduce cursorline redrawing when jumping around
+  * feat(input)!: delay some conversions to vgetc()
+
+  [ bfredl ]
+  * feat(input): enable <tab>/<c-i>, <cr>/<c-m>, <esc>/<c-[> pairs unconditionally
+
+  [ Dundar Göc ]
+  * refactor(memline): convert function comments to doxygen format
+
+  [ Lewis Russell ]
+  * chore: add additional compiler flags (#17815)
+
+  [ dundargoc ]
+  * refactor: convert function comments to doxygen format (#17710)
+
+  [ zeertzjq ]
+  * chore(nvim_paste): assert the correct String (#17752)
+
+  [ Gregory Anders ]
+  * feat(tui): enable CSI u keys
+  * feat(runtime): include Lua in C++ ftplugin (#17843)
+
+  [ Dundar Göc ]
+  * fix(PVS/V1019): compound assignment expression is used inside condition
+
+  [ Michael Lingelbach ]
+  * feat: add vim.tbl_get (#17831)
+
+  [ Gregory Anders ]
+  * fix(tui): correct CSI sequence (#17844)
+
+  [ Christian Clason ]
+  * build(deps): bump luajit to commit e2c312e (#17111)
+
+  [ Jared Weakly ]
+  * fix(filetype.lua): always return a string in getline helper function (#17852)
+
+  [ Javier Lopez ]
+  * docs(api): improve autocommand docs (#17545)
+
+  [ dundargoc ]
+  * chore: fix typos (#17755)
+
+ -- xbmc <xbmc@ate.cx>  Fri, 25 Mar 2022 17:08:11 -0400
+
+neovim (0.7.0~ubuntu1+git20220324044032-02c1d9ce5-2bd6d8f6c) bullseye; urgency=medium
+
+  [ Qosmio ]
+  * add deb packaging
+  * latest upstream
+
+  [ zeertzjq ]
+  * test: add test for deleting last listed buffer when there are floats (#17833)
+  * fix(float): don't always switch window when deleting last listed buffer (#17836)
+  * fix(float): do not switch window before deleting last listed buffer (#17840)
+
+ -- Qosmio <cross@arm64>  Thu, 24 Mar 2022 04:41:30 -0400
+
+neovim (0.7.0~ubuntu1+git20220323155619-0d082ae91-cede594d5) bullseye; urgency=medium
+
+  [ zeertzjq ]
+  * fix(screen): do not do syntax highlighting at filler or folded lines (#17818)
+
+  [ Qosmio ]
+  * latest upstream
+
+  [ zeertzjq ]
+  * fix(aucmd_win): always make aucmd_win the last window
+  * fix(win_close): count the window the be closed instead of curwin
+  * fix(float): handle buffer deletion with floating windows
+  * fix(float): make laststatus=1 behave consistently with floating windows
+  * refactor: remove cpo-& behavior (#17745)
+  * fix(screen): do not update syntax_last_parsed when drawing folded line (#17826)
+  * refactor(memline.c): make swapfile_unchanged() return bool (#17827)
+
+ -- xbmc <xbmc@ate.cx>  Wed, 23 Mar 2022 16:03:10 -0400
+
+neovim (0.7.0~ubuntu1+git20220322202325-4f7187df7-d12882bc0) hirsute; urgency=medium
+
+  [ Thiago de Arruda ]
+  * Import vim from changeset v5628:c9cad40b4181
+
+  [ aph ]
+  * Fix build on OSX/Archlinux and add README
+
+  [ Thiago de Arruda ]
+  * Remove more #ifdef dead code
+  * Automate libuv download and build
+  * Set vim binary as default make target
+  * Wrap calls to 'get_mess_env' into LIBINTL #ifdefs
+
+  [ aph ]
+  * fix build on OSX
+
+  [ Thiago de Arruda ]
+  * Document plans for the project
+  * Fix some typos in README
+  * Quote GUI diagram
+  * Set language of first json-rpc block
+  * Update documentation
+  * Add fundraiser link
+
+  [ Joshua Johnson ]
+  * Fix spelling
+
+  [ davertron ]
+  * Fix misspellings/grammar in README
+
+  [ Kornel Lugosi ]
+  * Add dependency install instructions for OsX
+
+  [ mmcdole ]
+  * Fix spelling mistakes in README.md
+
+  [ Meck ]
+  * Fix cmake link in README
+
+  [ Stephen Becker IV ]
+  * Update README.md
+  * Update README.md
+
+  [ Andy Fischer ]
+  * Add libtool to OSX installs
+
+  [ Cameron Eagans ]
+  * Adding note about IRC channel in README.
+
+  [ Lowe Thiderman ]
+  * Add Arch dependency instructions to README.md
+
+  [ nyuszika7h ]
+  * Clean up README.md
+  * Remove trailing whitespace in README.md
+  * Add Arch instructions (merged from GH-35).
+  * Change Ubuntu 12.04 to Ubuntu/Debian in README.md
+
+  [ aph ]
+  * include a copy of the Vim License
+
+  [ nyuszika7h ]
+  * Add modeline with tw per @ashleyh's suggestion
+
+  [ Mitchell Rosen ]
+  * Cleanup refactoring in main
+
+  [ Ashley Hewson ]
+  * README.md: link to the Contributing wiki page
+
+  [ Kornel Lugosi ]
+  * Remove trailing spaces from gitignore
+
+  [ Carl Martin Rosenberg ]
+  * Added automake as a dependency when building on OS X. Otherwise build complaints of missing aclocal.
+
+  [ Thiago de Arruda ]
+  * Add travis-ci configuration
+
+  [ Sean Long ]
+  * First pass on getting build working on FreeBSD.
+
+  [ Mitchell Rosen ]
+  * Clean up main.c:parse_command_name
+
+  [ Marek Šuppa ]
+  * Fixed travis image
+
+  [ Ashley Hewson ]
+  * README.md: fix ubuntu/debian deps
+
+  [ jdiez17 ]
+  * Added 'neovim' to the feature list, following discussion on #44
+
+  [ John Szakmeister ]
+  * scripts/common.sh: remove a couple bashisms
+
+  [ Cameron Eagans ]
+  * Adding neovim formula for Homebrew
+  * Adding `make` step
+  * Updating README file to use Homebrew for local builds
+
+  [ David Z. Chen ]
+  * Issue #97 - Add documentation on installing root SSL certificates on OS X, which is required for retrieving the libuv archive before building.
+
+  [ Rich Wareham ]
+  * Squashed 'third-party/libuv/' content from commit 3c40224
+  * get-libuv.sh: compile bundled libuv
+  * Makefile: refer to renamed compile-libuv.sh
+  * third-party: add note on role of directory
+
+  [ nyuszika7h ]
+  * Fix anchors
+  * Fix previous commit
+
+  [ scott-linder ]
+  * Convert function declarations from K&R to ANSI style.
+
+  [ waffle.io ]
+  * add waffle.io badge
+
+  [ Christian Wellenbrock ]
+  * Use neovim versions of ~/.vim and ~/.vimrc
+
+  [ Thiago de Arruda ]
+  * Put waffle and travis badge together
+
+  [ jdiez17 ]
+  * Changed binary output directory from src/ to bin/
+
+  [ Rich Wareham ]
+  * use CMake's built in pthread detection
+
+  [ Jim Hester ]
+  * Add table of contents to README.md
+  * Fix space in link
+
+  [ Thiago de Arruda ]
+  * Add link to mailing list
+
+  [ scott-linder ]
+  * Changed name of binary (vim -> nvim).
+
+  [ Diego Viola ]
+  * README.md: cosmetic fixes
+
+  [ Rich Wareham ]
+  * os_unix: add #include for libuv
+  * os_unix: switch to libuv chdir() function
+  * os_unix: use libuv total memory function
+  * move libuv functions to os.c and io.c module
+
+  [ Thiago de Arruda ]
+  * Create new OS module
+  * Add missing include guard to os module
+
+  [ Theo Belaire ]
+  * Added curl support and one test
+  * Silenced wget's progress bar
+
+  [ ash-lshift ]
+  * silence tar when getting libuv
+
+  [ Jim Hester ]
+  * Arch linux link in TOC had the wrong indentation
+
+  [ Thiago de Arruda ]
+  * Add local.mk include in makefile
+
+  [ HungMingWu ]
+  * add required dependency on Debian/Ubuntu system
+
+  [ Rich Wareham ]
+  * CMakeLists: add install target for nvim
+  * Makefile: add install target
+  * Makefile: allow configuration of CMake flags
+  * add installation as a travis test
+
+  [ Thomas Wienecke ]
+  * os_unix: Use libuv uv_cwd instead of getcwd/getwd.
+
+  [ Thiago de Arruda ]
+  * Modify travis script to remove testing noise
+
+  [ jbranchaud ]
+  * Rebased the following three commits onto one another:
+
+  [ Thomas Wienecke ]
+  * os_unix: Port mch_FullName and mch_isFullName to libuv.
+  * Delete local function strerror and USE_GETCWD define.
+
+  [ scott-linder ]
+  * Removes 'proto' dir
+
+  [ Ivan Enderlin ]
+  * Fix Markdown syntax.
+
+  [ Scott Nielsen ]
+  * Remove implicit declaration of vim_strrchr and vim_strncpy
+  * Remove final build warning
+
+  [ Rich Wareham ]
+  * add custom CMake module path
+  * add LibFindMacros CMake macro library
+  * Makefile: add .deps/ to CMake prefix path
+  * automatically discover libuv in CMake
+  * Makefile: fetch deps before running CMake
+  * make use of libuv when found by CMake
+  * CMakeLists: remove hardcoded .deps directory
+  * prefer linking to static libuv
+  * link to rt if it provides clock_gettime
+  * Makefile: use "make -C build" idiom
+
+  [ Ryuichi KAWAMATA (@rkmathi) ]
+  * #165 fix README.md for Building OS X
+
+  [ Rich Wareham ]
+  * CMake: add LibUV_USE_STATIC configuration variable
+  * Makefile: use static linkage with bundled libuv
+
+  [ Thiago de Arruda ]
+  * Add configuration to help debug memory leaks
+  * Temporarily remove valgrind check in travis build
+  * Add valgrind suppression file
+
+  [ Alexis Hildebrandt ]
+  * README: Add support for custom brew installations
+
+  [ Göran Gustafsson ]
+  * Markdown fix + MacPorts URL
+
+  [ Thiago de Arruda ]
+  * Enable valgrind when testing on travis
+  * Add test reporting to travis script
+  * Fix travis script
+  * Remove -e option from travis shell script
+  * Modify travis configuration to install valgrind
+  * Enable stderr for test in travis
+
+  [ Paweł Mandera ]
+  * Fixed header levels in markdown
+
+  [ Rui Abreu Ferreira ]
+  * Use FindCurses to find curses libraries
+
+  [ Paweł Mandera ]
+  * Anchors and reorder in dependency lists of README.md
+
+  [ Rich Wareham ]
+  * README: add note on RHEL/CentOS 6
+  * README.md: fix anchor tags for CentOS/RHEL section
+  * Use CMAKE_C_FLAGS variable to set compiler flags.
+  * README: add note on RHEL/CentOS 6
+  * README.md: fix anchor tags for CentOS/RHEL section
+
+  [ Thiago de Arruda ]
+  * Import luajit 2.0.2 source tree
+
+  [ Alexis Hildebrandt ]
+  * Use GNU gettext from homebrew on Mac if available
+
+  [ John Szakmeister ]
+  * Improve libintl detection and linking.
+
+  [ Alexis Hildebrandt ]
+  * CMakeLists: Use nvim target name
+  * CMakeLists: Improve handling of libintl
+
+  [ Thiago de Arruda ]
+  * Add basic infrastructure for unit testing
+  * Add more example unit tests and run with travis
+  * Disable unit tests until fixed for travis
+
+  [ John Szakmeister ]
+  * Compile libuv with -fPIC.
+
+  [ Thiago de Arruda ]
+  * Add unit test running to travis again
+
+  [ Scott Nielsen ]
+  * Use cmake module instead of shared for nvim-test
+
+  [ Felipe Oliveira Carvalho ]
+  * Extract garray.c from misc2.c
+  * Include "garray.h" in ex_cmds2.c
+
+  [ John Szakmeister ]
+  * Use _NSGetEnviron on Mac OS X to gain access to environ.
+  * Only include libintl's include dir if libintl was found.
+  * Setup better warning flags for Clang.
+
+  [ Felipe Oliveira Carvalho ]
+  * Fix a 'garbage value' warning found by Clang's static analyzer
+
+  [ Nicolas Hillegeer ]
+  * MAKE: ask gnulikes to warn and be pedantic + fixes
+
+  [ scott-linder ]
+  * Added a types.h with vim.h unsigned int typedefs.
+
+  [ Felipe Oliveira Carvalho ]
+  * Extract file_search.c from misc2.c
+
+  [ Ashley Hewson ]
+  * CONTRIBUTING.md: mention coding style
+
+  [ John Szakmeister ]
+  * Use $(MAKE) instead of ${MAKE}, and fixup two more make invocations.
+
+  [ Nicolas Pierron ]
+  * Clean-up main.c: follow STRNICMP replacement.
+
+  [ Jakub Stasiak ]
+  * Be more explicit about OS X deps installation
+
+  [ Islam Sharabash ]
+  * Adding darwin platform to common.sh build script
+
+  [ aph ]
+  * README.md: remove lingering references to sha1sum in OSX instructions
+
+  [ Theo Belaire ]
+  * Fixed nvim homebrew formula
+
+  [ aph ]
+  * homebrew: deparallelize build
+
+  [ Nicolas Pierron ]
+  * Remove __ARGS macro. Close #205
+
+  [ Gaelan Steele ]
+  * Use -Werror.
+
+  [ Gaelan ]
+  * Make Travis compile on GCC and Clang.
+
+  [ Thomas Wienecke ]
+  * Add unit tests for ported filesystem functions.
+
+  [ Alexander Bolodurin ]
+  * Remove dead stack-checking code.
+  * Remove traces of old custom undo memory manager.
+
+  [ Gaelan Steele ]
+  * Move some of misc1.c to indent.c.
+
+  [ andrewmchen ]
+  * README.md: Fixed brew install instructions
+
+  [ Caleb Spare ]
+  * Anchor gitignore paths
+
+  [ Thomas Wienecke ]
+  * Rename and refactor mch_FullName.
+  * Correct a few parentheses.
+
+  [ Thiago de Arruda ]
+  * Apply small refactor to unit tests
+
+  [ Simen Endsjø ]
+  * Assert that vim_strsize and vim_strnsize gets a non-null parameter.
+
+  [ Thomas Wienecke ]
+  * Add unit tests for mch_isdir.
+  * Remove static declaration of executable_file.
+  * Add unit tests for executable_file and mch_can_exe.
+  * Port mch_isdir to libuv.
+  * Implement pending test.
+
+  [ Simen Endsjø ]
+  * Remove USE_SYSTEM and code only run under USE_SYSTEM
+
+  [ David Z. Chen ]
+  * Issue #66 - Add lint tool and uncrustify config. Update contributing documentation on coding style.
+
+  [ Felipe Oliveira Carvalho ]
+  * Extract crypt.c from misc2.c
+  * Extract keymap.c from misc2.c
+
+  [ Thomas Wienecke ]
+  * Fix style issues.
+
+  [ Stefan Hoffmann ]
+  * cleanup environment variable handling + unit tests
+
+  [ John Szakmeister ]
+  * Luarocks appears to be down, so let's use the mirror for now.
+
+  [ Thiago de Arruda ]
+  * Fix memory leak and enable valgrind on travis
+
+  [ Felipe Oliveira Carvalho ]
+  * Move garray_T from structs.h to garray.h
+  * Move some types and consts from structs.h to other headers
+
+  [ John Szakmeister ]
+  * Use check_function_exists() to check for _NSGetEnviron().
+
+  [ Thiago de Arruda ]
+  * Remove hangul input support
+
+  [ David Z. Chen ]
+  * Issue #311 - Clean up arabic.c, arabic.h, farsi.c, farsi.h. Tweaks to uncrustify.cfg.
+
+  [ Thiago de Arruda ]
+  * Fix `free_all_mem` and EXITFREE definition
+  * Fix memory leak in `eval7`
+
+  [ scott-linder ]
+  * Added MODIFIED_BY and updated version information.
+
+  [ Steven Myint ]
+  * Make script portable across Python versions
+
+  [ Thomas Wienecke ]
+  * Add another unit test to mch_can_exe.
+  * Move mch_can_exe, executable_file to os/fs.c.
+  * Declare is_executable as static and remove its unit tests.
+  * Simplify mch_can_exe extracting is_executable_in_path.
+  * Move definition of helper function below their usage.
+  * Remove unused return values.
+  * Fix bugs, clean code, add tests.
+
+  [ Stefan Hoffmann ]
+  * use more verbose output type for unittests on travis
+
+  [ Wilberto ]
+  * Change neo* configurations to n* configurations
+
+  [ Felipe Oliveira Carvalho ]
+  * Extract pos.h from structs.h
+  * Move exarg_T and cmdarg_T from structs.h to normal.h
+  * Extract cursor_shape.c from misc2.c and types/consts from structs.h
+  * Remove CURSOR_SHAPE #ifdef tests
+
+  [ Thiago de Arruda ]
+  * Refactor travis build to use clang's sanitizers
+
+  [ Stefan Hoffmann ]
+  * refactored logic from init_users() into mch_get_usernames()
+  * moved mch_get_user_name() and mch_get_uname() into os/users.c
+  * removed get_user_name() and replaced calls with mch_get_user_name()
+  * refactored part of expand_env_esc() into mch_get_user_directory()
+
+  [ oni-link ]
+  * Fix: Use an assert to make sure, an error message can be copied into buffer buf in mch_dirname().
+
+  [ Thiago de Arruda ]
+  * Remove remaining hangul-related code
+
+  [ Julian Orth ]
+  * add .vimrc and src/.ycm_extra_conf.py
+
+  [ Felipe Oliveira Carvalho ]
+  * Include <stdint.h> in types.h
+  * Replace UINT32_T by uint32_t
+  * Remove useless sizeof(uint32_t) == 4 test
+
+  [ John ]
+  * Extract indent_c.c from misc1.c
+
+  [ James McCoy ]
+  * Adapt include guards to the style guide
+  * Use include paths relative to src/
+
+  [ John ]
+  * Moved more functions from misc1.c to indent.c
+
+  [ Thomas Wienecke ]
+  * Add unit tests for mch_[gs]etperm.
+  * Move and refactor mch_[gs]etperm to os/fs module.
+  * Revive vim_fname (-> os_file_exists); fix misuse of mch_getperm.
+
+  [ aph ]
+  * minimize readme
+
+  [ David Z. Chen ]
+  * Issue #311 - Clean up blowfish.c/h, charset.c/h, diff.c/h, digraph.c/h, garray.c/h, hashtab.c/h, popupmnu.c/h, sha256.c/h, version.c/h. Update uncrustify to move logical operators to the beginning of the line when splitting. Also, clean up arabic.c/h and farsi.c/h
+
+  [ Tayler Mulligan ]
+  * Removed testing for Homebrew installs
+
+  [ Felipe Oliveira Carvalho ]
+  * Delete structs.h by spliting it and moving code to other headers
+
+  [ Petter Wahlman ]
+  * adapt to the style guildelines
+
+  [ Tayler Mulligan ]
+  * Homebrew formula builds dependencies through make
+
+  [ Marcel Krüger ]
+  * No longer try to use standalone termcap
+
+  [ Felipe Oliveira Carvalho ]
+  * printer_opts was left unitilized after #378
+
+  [ John Szakmeister ]
+  * Revamp the build system.
+  * Deal with the missing dependencies for libuv.
+  * Workaround the broken progress feedback in some versions of CMake.
+
+  [ Thiago de Arruda ]
+  * Update to the newest libuv version
+
+  [ John Szakmeister ]
+  * Don't require busted.
+
+  [ Felipe Oliveira Carvalho ]
+  * Turn ARABIC_CHAR into a function
+  * Move arabic.h #defines from arabic.h to arabic.c
+  * Reformat new function in arabic.c to comply with style guide
+  * inline arabic_char()
+
+  [ Thiago de Arruda ]
+  * Implement `mch_delay` on top of libuv
+
+  [ Stefan Hoffmann ]
+  * fix mch_delay() unittest
+
+  [ John Szakmeister ]
+  * Fail RunUnittests if we get a non-zero exit code from busted.
+
+  [ Felipe Oliveira Carvalho ]
+  * Move some #defines from farsi.h to farsi.c
+  * Do not include farsi.c in main.c
+  * Use memset instead of vim_memset
+
+  [ Petter Wahlman ]
+  * Prefer enums over incremental defines
+
+  [ Felipe Oliveira Carvalho ]
+  * Use memmove instead of mch_memmove
+  * Use memcmp instead of vim_memcmp
+  * Remove MEM_PROFILE related code
+  * HAVE_AVAIL_MEM is always undefined. Remove tests and dead code
+  * Use realloc instead of vim_realloc
+
+  [ Thiago de Arruda ]
+  * Reimplement input functions on top of libuv
+
+  [ John ]
+  * Cleanup of indent.c to make it comply with style guide.
+
+  [ Julian Orth ]
+  * remove CheckMakePairUsesDeduction
+  * remove CheckForIncludeWhatYouUse
+  * remove CheckCStyleCast
+  * remove CheckForNonConstReference
+  * remove "stream check" from CheckIncludeLine
+  * remove C++ only stuff from CheckLanguage
+  * remove some unused variables
+  * remove unused function
+  * remove CheckSectionSpacing
+  * remove C++ stuff from CheckSpacing
+  * remove C++ stuff from CheckSpacingForFunctionCall
+  * clean up CheckForNonStandardConstruct
+  * remove C++ only _NestingState parts
+  * remove CleanseRawStrings
+  * remove cpp file extensions
+  * remove cpp headers
+  * remove some leftover function calls
+  * remove leftover c++ headers
+  * More cleanup
+
+  [ John Szakmeister ]
+  * Don't use alias in travis.sh.
+
+  [ Thiago de Arruda ]
+  * Make `EventType` enum private to input.c
+  * Re-integrate FEAT_FILTERPIPE code
+  * Fix prepare watcher teardown in the event loop
+
+  [ Thomas Wienecke ]
+  * Rename mch_* functions to os_* in os module.
+  * Address clint warnings and other style issues.
+
+  [ John Szakmeister ]
+  * Append to CMAKE_PREFIX_PATH instead setting it outright.
+  * Drop the deb-src for clang.
+
+  [ John Schmidt ]
+  * Extract path.c from misc1.c
+  * Move remove_duplicates to garray.c
+
+  [ Nicolas Hillegeer ]
+  * add func_attr.h to be able to use func attribs
+  * use function attributes on allocation functions
+
+  [ Justin M. Keyes ]
+  * Re-integrate FEAT_SIGNS code, close #383
+
+  [ John Szakmeister ]
+  * Use the clang 3.4 release tarball instead of apt for clang 3.4.
+  * Force the `cmake` target to re-run the CMake configuration.
+
+  [ Justin M. Keyes ]
+  * update readme: "progress" section; formatting
+
+  [ Felipe Oliveira Carvalho ]
+  * xmalloc() that succeeds or gracefully aborts
+  * Avoid a seg fault when exiting after OOM error
+  * Document xmalloc() and deprecate lalloc()
+  * xrealloc(): similar to xmalloc()
+
+  [ Thomas Wienecke ]
+  * Add basic Doxyfile.
+  * Add doxygen-style comments to functions from os/fs.c.
+
+  [ Thiago de Arruda ]
+  * Split code for counting and parsing arguments
+  * Extract `shell_skip_word` from `mch_call_shell`
+  * Extract `shell_count_argc` from `mch_call_shell`
+  * Make `extra_shell_arg` a `mch_call_shell` parameter
+  * Extract `shell_build_argv` from `mch_call_shell`
+  * Refactor/cleanup argument parsing functions
+  * Refactor SHELL_* defines into enum typedef
+  * Update `call_shell` signature to use `ShellOpts`
+  * Rewrite `show_shell_mess` as a `ShellOpts` flag
+  * Add doxygen comments to the functions in shell.c
+  * Fix shell.{c,h} comments to match the style guide
+
+  [ John Schmidt ]
+  * Inline ga_init()
+  * Rename ga_init2() to ga_init()
+
+  [ Nicolas Hillegeer ]
+  * func-attr: clang 3.5 doesn't support alloc_size
+  * func-attr: add some extra handy function attrs
+  * alloc: xmalloc and xrealloc can't return null
+
+  [ oni-link ]
+  * Remove feature HAVE_QSORT
+
+  [ Julian Orth ]
+  * remove HAVE_SETJMP_H
+  * remove HAVE_ERRNO
+  * remove HAVE_BCMP
+
+  [ oni-link ]
+  * remove HAVE_MEMCMP
+  * remove HAVE_MEMSET
+
+  [ Julian Orth ]
+  * remove HAVE_MATH_H
+  * remove HAVE_INTTYPES
+  * remove HAVE_STDINT
+  * remove HAVE_STDARG_H
+  * remove HAVE_{ISWUPPER,ISWLOWER,TOWUPPER,TOWLOWER}
+
+  [ aph ]
+  * enable coveralls support
+
+  [ John Schmidt ]
+  * Move simplify_filename from tag.c
+  * Move functions from window.c
+  * Move fix_fname from buffer.c
+  * Move after_pathsep from misc2.c
+  * Move same_directory from misc2.c
+  * Move pathcmp from misc2.c
+  * Move mch_expandpath from os_unix.c
+  * Move shorten_fname{,1,s} and shorten_filenames from fileio.c
+  * Move expand_wildcards{,_eval} from misc1.c
+  * Move match_suffix from misc1.c
+  * Move shorten_filenames back to fileio.c
+
+  [ Thiago de Arruda ]
+  * Move signal handling to libuv event loop
+
+  [ Thomas Wienecke ]
+  * Delete os_delay unit test.
+
+  [ oni-link ]
+  * remove HAVE_DATE_TIME
+  * remove HAVE_FLOAT_FUNCS
+  * remove HAVE_RENAME
+  * remove HAVE_SIGCONTEXT
+  * remove HAVE_STDLIB_H
+  * remove HAVE_STRERROR
+  * remove HAVE_STRFTIME
+  * remove HAVE_STRING_H
+  * remove HAVE_STRPBRK
+  * remove HAVE_STRTOL
+  * remove HAVE_SVR4_PTYS
+  * remove HAVE_SYSINFO and HAVE_SYSINFO_MEM_UNIT
+  * remove HAVE_SYS_{POLL_H, RESOURCE_H, SYSCTL_H, TYPES_H}
+  * remove HAVE_USLEEP
+  * remove HAVE_WCHAR_H
+  * remove HAVE_WCTYPE_H
+  * remove HAVE_DL{OPEN, SYM}
+  * remove HAVE_FCHDIR
+  * Replace use of mch_rename with rename.
+
+  [ Justin M. Keyes ]
+  * vim-patch:7.4.166
+
+  [ John Szakmeister ]
+  * Use check_symbol_exists() instead of check_function_exists().
+
+  [ Thiago de Arruda ]
+  * Force travis build failure when some test fails
+
+  [ Stefan Hoffmann ]
+  * check readonly by trying to open the file for writing...
+  * move check_file_readonly() into /src/os/fs.c and rename it
+  * move filewritable() into /src/os/fs.c and rename it
+  * remove mch_access macro as it is only used in fs.c
+  * cleaned up the readonly check in readfile()
+  * added doxygen documentation for os_file_is_{readonly, writable}
+
+  [ Thomas Wienecke ]
+  * Make FPC_* defines an enum type in path.h.
+  * Move gettail_dir more closely to its usage.
+  * Add os_stat to os/fs module.
+  * Refactor fullpathcmp -> path_full_compare.
+  * Test and refactor gettail -> path_tail.
+  * Test and refactor gettail_sep -> path_tail_with_seperator.
+  * Test and refactor getnextcomp -> path_next_component.
+  * Fix seperator->separator, path_tail_with_separator->path_tail_with_sep.
+  * Initialize on declaration; use postincrements.
+  * Rename FPC_* constants.
+
+  [ Thiago de Arruda ]
+  * Remove support for running interactive programs
+  * Remove `:shell` and `suspend_shell`
+  * Remove `mch_call_shell` GUI printing code
+
+  [ Eliseo Martínez ]
+  * Fix #451: Build broken on OSX.
+
+  [ Jared L Wong ]
+  * Changed testdir/Makefile to use Makefile wildcards instead of SUFFIXES
+
+  [ Hinidu ]
+  * Replace mch_rename and vim_rename with libuv
+  * Restore vim_rename
+
+  [ Keerthan Jaic ]
+  * vim-patch:7.4.169
+
+  [ John Schmidt ]
+  * Extract memory.c from misc2.c
+
+  [ Wilberto Morales ]
+  * Try to find all other instances of vimrc and gvimrc and prefix them  with n
+  * Possible string literals that have to be replaced
+
+  [ oni-link ]
+  * vim-patch:7.4.170
+
+  [ Stefan Hoffmann ]
+  * Removed not defined prototypes in os_unix.h
+
+  [ Markus Breitenberger ]
+  * Remove unused define
+
+  [ aph ]
+  * remove DO_AUTOCHDIR
+  * remove MB_{IS,TO}{UPPER,LOWER}
+  * remove pchar from macros.h
+  * remove reference to BROKEN_TOUPPER
+
+  [ John Schmidt ]
+  * Remove netbeans and sun workshop
+  * Remove Amiga stuff
+  * Remove SniFF
+  * Remove HPUX and Vim 5.x compatible digraphs
+  * Remove BalloonEval
+  * Remove clientserver
+  * Remove Xim
+  * Remove python, perl, lua, ruby
+  * Remove mzscheme
+  * Remove ole
+  * Remove tcl
+  * Remove xpm
+  * Remove xterm_save
+  * Remove mblen() check
+
+  [ oni-link ]
+  * vim-patch:7.4.172
+
+  [ Thiago de Arruda ]
+  * Add helpers for debugging with valgrind
+  * Stop queueing events when signals are rejected
+  * Rewrite `mch_call_shell` on top of libuv
+  * Remove the old `mch_call_shell` implementation
+
+  [ oni-link ]
+  * vim-patch:7.4.171
+
+  [ Stefan Hoffmann ]
+  * Moved mch_get_pid and renamed it to os_get_pid
+  * Moved mch_get_host_name and renamed it to os_get_hostanme
+
+  [ oni-link ]
+  * vim-patch:7.4.173
+
+  [ Thiago de Arruda ]
+  * Use early return for rejecting_deadly in signal_cb
+
+  [ oni-link ]
+  * vim-patch:7.4.178
+
+  [ Thiago de Arruda ]
+  * Implement `xstrdup` and `xstrndup`
+  * Replace `strdup` calls by `xstrdup`
+  * Implement os_microdelay and os_delay on top of it
+  * Remove `RealWaitForChar` and `mch_new_shellsize`
+  * Add comments and fix `os_microdelay` call
+  * Remove unneeded variable `in_os_delay`
+
+  [ Felipe Oliveira Carvalho ]
+  * Simplify tricky preprocessor tests in ff_check_visited()
+  * Remove simpler cases of OOM error handling (after *alloc calls)
+  * Add klib.h to src/lib
+  * Implement xcalloc and use it in klist.h (use xrealloc as well)
+  * Reimplement the event queue in event.c using klist.h
+  * Turn Event into a tagged union
+
+  [ Hinidu ]
+  * Use stdbool in os module
+  * Added clint check for TRUE/FALSE
+
+  [ Thiago de Arruda ]
+  * Implement job control
+  * Add BACKERS.md
+  * Format backers list
+
+  [ Hinidu ]
+  * vim-patch:7.4.181
+  * Remove #ifdef FEAT_WINDOWS from vim-patch:7.4.181
+  * vim-patch:7.4.184
+
+  [ Thiago de Arruda ]
+  * Run clint.py in some files
+  * Fix/add more files with to clint-files.txt
+  * Define special key for asynchronous events
+  * Remove old comment from job.c
+  * Remove donation value from backers.md
+  * Sort backers.md
+  * Add some missing backers and remove duplicates
+
+  [ John Schmidt ]
+  * Move functions from os/fs.c into path.c
+
+  [ John ]
+  * Move and adapt `os_get_absolute_path` unit tests to `vim_FullName`
+
+  [ John Schmidt ]
+  * Change prefix from `os_*` to `path_*`
+  * Move exe functions back to os/fs.c
+
+  [ oni-link ]
+  * vim-patch:7.4.186
+
+  [ John Schmidt ]
+  * Fix broken build due to unit test include order
+
+  [ Hinidu ]
+  * vim-patch:7.4.187
+
+  [ John Schmidt ]
+  * Replace `alloc_check` by `xmalloc`
+
+  [ Felipe Oliveira Carvalho ]
+  * Remove more OOM error handling code
+  * Remove OOM error handling code after calls to diff_alloc_new()
+  * Remove OOM error handling code after calls to transstr()
+  * Remove OOM error handling code after calls to mf_hash_grow()
+  * Remove OOM error handling code after ga_grow() calls
+  * No error condition in foldInsert()
+  * alist_add_list() doesn't return -1 anymore
+  * No error condition in get_arg_list()
+  * No error condition in store_loop_line()
+  * No error condition in push_current_state()
+
+  [ Stefan Hoffmann ]
+  * port vim_mkdir, mch_rmdir and mch_remove to libuv
+  * removed mch_remove macro
+  * removed mch_rmdir macro
+  * removed vim_mkdir macro
+
+  [ oni-link ]
+  * vim-patch:7.4.192
+
+  [ Thiago de Arruda ]
+  * Add cmake module for finding msgpack
+  * Configure cmake option to download/install msgpack
+  * Add empty implementations of the remote API
+  * Implement msgpack-rpc helper module
+  * Add `msgpack_rpc_dispatch`/metadata generator
+
+  [ Stefan Hoffmann ]
+  * updated readme header
+
+  [ Keerthan Jaic ]
+  * vim-patch 7.4.199
+
+  [ oni-link ]
+  * vim-patch:7.4.193
+  * vim-patch:7.4.167
+
+  [ Chris Watkins ]
+  * Rename os_total_mem to os_get_total_mem_kib.
+
+  [ oni-link ]
+  * vim-patch:7.4.203
+
+  [ Thiago de Arruda ]
+  * Use cmake to find a lua executable
+  * Add checks for lpeg/cmsgpack lua packages
+  * Add lpeg as explicit third-party dependency
+
+  [ oni-link ]
+  * vim-patch:7.4.204
+  * vim-patch:7.4.205
+  * vim-patch:7.4.191
+
+  [ Will Tange ]
+  * Bring neovim up to date with recent libuv changes
+
+  [ Thiago de Arruda ]
+  * Fix unit tests
+
+  [ oni-link ]
+  * vim-patch:7.4.207
+
+  [ Thiago de Arruda ]
+  * Add more commented patch numbers to version.c
+  * Bump LuaJIT to version 2.0.3
+
+  [ oni-link ]
+  * vim-patch:7.4.209
+  * vim-patch:7.4.210
+  * vim-patch:7.4.213
+  * vim-patch:7.4.219
+
+  [ Marco Hinz ]
+  * vim-patch:7.4.215
+  * vim-patch:7.4.218
+  * vim-patch:7.4.221
+  * vim-patch:7.4.229
+  * vim-patch:7.4.232
+  * vim-patch:7.4.233
+  * vim-patch:7.4.234
+  * vim-patch:7.4.239
+  * vim-patch:7.4.240
+  * vim-patch:7.4.251
+  * vim-patch:7.4.253
+
+  [ Klemen Košir ]
+  * Initialize a variable.
+
+  [ Thiago de Arruda ]
+  * Extract reading boilerplate into rstream.c module
+  * Refactor job control module to use RStream class
+  * Refactor input module to use RStream class
+
+  [ Marco Hinz ]
+  * Remove modelines
+
+  [ Thiago de Arruda ]
+  * Configure travis to use prebuilt dependencies
+  * Handle special KE_EVENT case where maxlen < 3
+
+  [ Marco Hinz ]
+  * Remove 'textmode' option
+
+  [ oni-link ]
+  * vim-patch:7.4.245
+  * vim-patch:7.4.226
+
+  [ Richard Hartmann ]
+  * Correct 'RichiH' name in BACKERS.md
+
+  [ ccvergara ]
+  * update backers.md with bountysource survey responses
+
+  [ Thiago de Arruda ]
+  * Deal with backpressure on RStream instances
+  * Create EventType for RStream reading
+  * Refactor job control to use RStream events
+  * Correctly free libuv handles
+  * Extract writing boilerplate into wstream.c module
+  * Refactor job.c module to use WStream
+  * Stop job prepare watcher when there are no jobs
+  * Free job data on close_cb
+  * Remove unnecessary cleanup label from `job_start`
+  * Fix bug of `job_stop` not emitting `JobExit`
+  * Add missing names to BACKERS.md
+
+  [ John Schmidt ]
+  * Remove `lalloc_clear`
+
+  [ oni-link ]
+  * vim-patch:7.4.236
+
+  [ Nicolas Hillegeer ]
+  * use fixed-width types to define u8char_T
+
+  [ Lowe Schmidt ]
+  * I donated > 50 $, should be with URL
+
+  [ Pavel Platto ]
+  * Added os_isatty
+  * Removed mch_check_win
+  * Removed mch_input_isatty
+  * Replace explicit uv_guest_handle(fd) == UV_TTY by os_isatty
+
+  [ Marco Hinz ]
+  * Remove 'textauto' option
+  * Remove "h" flag of 'highlight' option
+
+  [ John Szakmeister ]
+  * Add the -Wconversion flag for some files.
+
+  [ Nicolas Hillegeer ]
+  * fix -Wconversion warnings for rstream
+
+  [ John Schmidt ]
+  * Remove dead code in clint.py
+
+  [ John Szakmeister ]
+  * Allow USERNAME to be specified on the command line.
+
+  [ oni-link ]
+  * Remove proto as an include directory.
+
+  [ John Schmidt ]
+  * Remove sizeof(int) < 4 related code
+
+  [ Stefan Hoffmann ]
+  * cleanup os_unixx.h
+  * inline the rest of os_unixx.h into os_unix.c
+
+  [ Eliseo Martínez ]
+  * Broken build on 32 bit: Fix -Wshorten-64-to-32.
+  * Broken build on 32 bit: Fix -Wtautological-constant-out-of-range-compare.
+
+  [ Thiago de Arruda ]
+  * Use libtinfo as a fallback for curses
+  * Configure travis to perform a 32-bit build
+  * Fix clint.sh wrapper script and broken files
+
+  [ Eliseo Martínez ]
+  * Use portable format specifiers: Case %lld - plain - sprintf.
+  * Use portable format specifiers: Case %lld - localized - sprintf.
+  * Use portable format specifiers: Remove branching with LONG_LONG_OFF_T.
+  * Use portable format specifiers: Case %ld - plain - sprintf.
+  * Use portable format specifiers: Case %ld - localized - sprintf.
+  * Use portable format specifiers: Case %ld - plain - fprintf.
+  * Use portable format specifiers: Case %ld - plain - smsg.
+  * Use portable format specifiers: Case %ld - localized - smsg.
+  * Use portable format specifiers: Case %ld - plain - vim_snprintf.
+  * Use portable format specifiers: Case %ld - localized - vim_snprintf.
+  * Use portable format specifiers: Case %ld - localized - vim_snprintf_add.
+  * Use portable format specifiers: Adapt EMSGN/emsgn to use (int64_t).
+  * Use portable format specifiers: Case %ld - plain - EMSGN.
+  * Use portable format specifiers: Case %ld - localized - EMSGN.
+  * Use portable format specifiers: Case %ld - localized - N_.
+  * Use portable format specifiers: Case %ld - *.po files.
+  * Use portable format specifiers: Support 'll' in vim_snprintf.
+  * Use portable format specifiers: Case %l[uoxX] - plain - sprintf.
+  * Use portable format specifiers: Case %lu - localized - EMSGN.
+  * Use portable format specifiers: Remove dead code.
+  * Use portable format specifiers: Case %l[uoxX] - *.po files.
+  * Use portable format specifiers: Clint advice & other.
+
+  [ John Szakmeister ]
+  * Make it easy to get a verbose build of Neovim.
+  * Allow a single unittest file to be run.
+  * Install the libncurses5-dev:i386 package to get the correct symlinks.
+
+  [ oni-link ]
+  * vim-patch:7.4.237
+
+  [ Felipe Oliveira Carvalho ]
+  * Use xmalloc() and xmemdupz() in file_pat_to_reg_pat()
+  * (verbose_)?try_malloc() to use on buf_write()
+  * No OOM error condition in prep_exarg()
+  * No OOM error condition in ga_concat_strings(), concat_fnames(), concat_str()
+  * No OOM error condition in prt_build_cid_fontname()
+  * No OOM error condition in save_patterns()
+  * No OOM error condition in cs_make_vim_style_matches()
+  * No OOM errors in mb_str2wide, slang_alloc, open_spellbuf
+  * No OOM error conditions in some functions of window.c
+  * No OOM error in call_shell() and read_string()
+  * No OOM error conditions in quickfix.c and regex_nfa.c
+  * Add FUNC_ATTR_NONNULL_RET to some functions
+  * No OOM error condition in get_register() and yank_copy_line()
+  * No OOM error condition in some ml_* functions
+  * Remove OOM test in set_context_in_menu_cmd()
+  * Use /2 and 2* instead of >>1 and <<1 which are tricky with signed types
+  * Add cast to unsigned to improve div by 2 in find_internal_func()
+
+  [ Stefan Hoffmann ]
+  * Remove mch_screenmode, inline EMSG into ex_mode()
+
+  [ Chris Watkins ]
+  * Remove O_EXTRA which was only for EMX and cygwin.
+  * Add the neovim style guide to the contributing guide.
+
+  [ Eliseo Martínez ]
+  * Broken build on 32 bit: Pending TODO: Reenable assertion.
+
+  [ Marco Hinz ]
+  * vim-patch:7.4.261
+  * Tests: prettify Makefile
+  * vim-patch:7.4.260
+
+  [ Steven Myint ]
+  * Remove deprecated "--use-mirrors"
+
+  [ John Schmidt ]
+  * Remove `alloc_clear`
+
+  [ Chris Watkins ]
+  * Remove code and checks for unsupported systems.
+
+  [ oni-link ]
+  * Call to list_append_dict cannot fail.
+  * Call to list_append_string cannot fail.
+
+  [ Marco Hinz ]
+  * Remove useless modelines (pt2)
+
+  [ Eliseo Martínez ]
+  * Use portable format specifiers: Case %ld - plain - sscanf.
+
+  [ Marco Hinz ]
+  * Fix garray.* according to -Wconversion
+
+  [ Eliseo Martínez ]
+  * Use portable format specifiers: Clarify some casted expressions.
+  * Use portable format specifiers: Improve arguments formatting.
+
+  [ Marco Hinz ]
+  * vim-patch:7.4.264
+
+  [ Leonard Ehrenfried ]
+  * Hold java packages to speed up build
+
+  [ Mathias Bynens ]
+  * README: Use SVG badge for Travis
+
+  [ Klemen Košir ]
+  * vim-patch:7.4.265
+
+  [ oni-link ]
+  * vim-patch:7.4.241
+
+  [ Nicolas Hillegeer ]
+  * path: add 'garray.h' to headers
+  * test: fix the cimport method
+  * test: no longer define ad-hoc C headers
+
+  [ Chris Watkins ]
+  * Remove references to FEAT_{X11,CLIPBOARD} and USE_XSMP.
+
+  [ John Schmidt ]
+  * Remove `shorten_filenames` (dead code)
+
+  [ John ]
+  * Test and refactor `shorten_fname` and `shorten_fname1`
+
+  [ Nicolas Hillegeer ]
+  * garray: add unit tests
+  * garray: refactor ga_grow
+  * memory: implement xstp(n)cpy
+  * garray: reimplement ga_concat_strings with stpcpy
+  * garray: implement ga_concat_strings_sep
+  * garray: add unit tests for ga_concat_strings_sep
+  * garray: make parameter of ga_concat_strings const
+  * garray: refactor and optimize ga_concat
+  * garray: comment and refactor a bit more
+
+  [ Klemen Košir ]
+  * vim-patch:7.4.262
+  * Updated comments in spell.h/.c to follow the style guide.
+
+  [ oni-link ]
+  * Call to list_append_number cannot fail.
+  * Call to list_append_tv cannot fail.
+  * Call to rettv_list_alloc cannot fail.
+  * Cleanup
+
+  [ Klemen Košir ]
+  * Cleanup crypt.h/.c to follow the style guide.
+  * Added crypt.h doxygen comments.
+  * Changed variable types to fixed-size.
+
+  [ Marco Hinz ]
+  * vim-patch:7.4.266
+  * vim-patch:7.4.269
+  * Refactor test_eval
+  * vim-patch:7.4.268
+  * Remove NUL macro
+
+  [ John Szakmeister ]
+  * build: remove unnecessary flag from CMAKE_FLAGS
+
+  [ Marco Hinz ]
+  * vim-patch:7.4.272
+
+  [ Joel Teichroeb ]
+  * Remove incorrect trailing backslash
+
+  [ Justin M. Keyes ]
+  * revert #652
+
+  [ Chris Watkins ]
+  * Replace 'alloc' with 'xmalloc' in some files.
+
+  [ Hinidu ]
+  * Added missing #define guards in headers
+
+  [ John Schmidt ]
+  * Extract strings.c from misc2.c
+  * Move `concat_strings` from path.c
+
+  [ Pavel Platto ]
+  * Remove two-iteration loop from ExpandGeneric
+  * Remove two-iteration loop from expand_filename
+  * Remove two-iteration loop from check_keyword_id
+
+  [ Chris Watkins ]
+  * Remove checks for SHORT_FNAME and USE_LONG_FNAME.
+
+  [ Felipe Oliveira Carvalho ]
+  * Don't retry to make the tempname in write_viminfo() with shortname=1
+  * Remove the code related to the shortname option
+  * Remove the always-FALSE shortname argument from buf_modname()
+  * Rename buf_modname to modname as they've become the same
+
+  [ John Schmidt ]
+  * Update README: progress section
+
+  [ Marco Hinz ]
+  * Improve test_eval.in
+
+  [ ZyX ]
+  * Do not detect macros like VIM_TRUE as boolean values
+
+  [ Eliseo Martínez ]
+  * Remove project int types: Case short_u: Replace with uint16_t.
+  * Remove project int types: Case int_u: Replace with uint32_t.
+  * Remove project int types: Case long_i: Replace with plain long.
+
+  [ John Szakmeister ]
+  * Generate a lua module to help pass build-related settings.
+
+  [ Thomas Wienecke ]
+  * Remove undefined functions.
+  * Remove unused function add_long_to_buf.
+  * Remove unused function handle_drop.
+  * Remove unused function get_shape_idx.
+  * Remove unused function re_lookbehind.
+  * Remove unused function highlight_gui_color_rgb.
+  * Remove unused function ui_inchar_undo.
+  * Remove undefined function suspend_shell.
+  * Remove unused function vim_free_in_input_buf.
+  * Remove unused function push_raw_key.
+  * Remove unused function yank_cut_buffer0.
+  * Remove undefined function gui_show_popupmenu + call.
+  * Remove undefined function gui_show_popupmenu + its unused return defines.
+  * Remove unused function unset_global_local_option.
+  * Remove undefined function server_to_input_buf.
+  * Remove unused function free_register.
+  * Remove undefined function adjust_clip_reg.
+  * Remove unused function is_autocmd_blocked.
+  * Remove unused function get_fpos_of_mouse.
+  * Remove undefined function clip_yank_selection.
+  * Remove unused function cmdline_overstrike.
+  * Remove unused function cmdline_at_end.
+  * Remove unused function vcol2col.
+  * Fix unit test cleanup of path_shorten_fname_if_possible.
+
+  [ Eliseo Martínez ]
+  * Use portable format specifiers: Adapt/fix EMSGU/emsgu to use (uint64_t).
+  * Use portable format specifiers: Case %lu - localized - EMSGU.
+
+  [ Marco Hinz ]
+  * vim-patch:7.4.274
+
+  [ Matthias Beyer ]
+  * Replace vim_free() implementation
+  * replaced `vim_free()` calls with `free()` calls
+  * removed `vim_free()` function
+
+  [ Felipe Oliveira Carvalho ]
+  * Use REGEXP_DEBUG to enable log-based regexp debugging
+  * Macro-based log utility for Neovim
+  * Introduce os_localtime_r() and os_get_local_time()
+
+  [ Dane Summers ]
+  * Prevent preserve_exit() from executing more than once.
+
+  [ Justin M. Keyes ]
+  * coveralls upload should not fail the CI build
+
+  [ Felipe Oliveira Carvalho ]
+  * Replace lalloc() with xmalloc()
+  * No OOM error in make_filter_cmd()
+  * Delete the lalloc() function
+
+  [ aph ]
+  * update CONTRIBUTING.md
+
+  [ Josh Davis ]
+  * Update CONTRIBUTING.md with current info
+
+  [ Stefan Hoffmann ]
+  * replaced some mch_stat() with os_file_exists()
+  * use os_getperm() in f_getfperm()
+  * implemented os_file_get_size()
+  * implemented FileInfo struct
+  * replaced mch_fstat() with os_file_get_info_fd()
+  * replaced some mch_stat() with os_get_file_info()
+  * replaced some mch_lstat()
+  * replaced mch_stat() in buffer.c
+  * replaced last mch_stat() and mch_lstat()
+  * removed mch_lstat() and mch_stat() macros
+  * remove unused parameter from `buf_store_file_info`
+
+  [ Harsh Kumar ]
+  * Simple Split 2-iter loop: msg_show_console_dialog
+  * Add new functions for memory alloction & data copy
+  * Style corrections in the two new functions
+
+  [ Thiago de Arruda ]
+  * Add --with-pic flag to msgpack configuration
+  * Implement generic map on top of khash
+  * Add helpers for accessing data in libuv handles
+  * Refactor modules to use handle data accessors
+  * Add teardown function for the event.c module
+  * Fix update of pending_reqs in `write_cb`
+  * Refactor API types and prototypes
+  * Add channel module
+  * Add server module for accepting API connections
+  * Fix jumps depending on unitialized values
+  * API: Implement vim_command
+  * API: Implement vim_eval
+  * API: Implement vim_strwidth
+  * API: Implement vim_list_runtime_paths
+  * API: Implement vim_change_directory
+  * API: Move helper functions to another module
+  * API: Implement buffer_{get,set}_line
+  * API: Extract error boilerplate into a macro
+  * API: Implement vim_set_current_line
+  * API: Move vim_to_object to helpers.c
+  * API: Implement vim_{get,set}_var
+  * API: Implement vim_{get,set}_option
+  * API: Implement vim_{out,err}_write
+  * API: Implement vim_get_buffer_count
+  * API: Implement buffer switching functions
+  * API: Implement window/tabpage switching functions
+  * API: Implement buffer_get_length
+  * API: Implement buffer_{get,set}_slice
+  * API: Refactor buffer_{get,set}_line
+  * API: Implement functions for deleting lines
+  * API: Implement buffer_{get,set}_var
+  * API: Implement buffer_{get,set}_option
+  * API: Implement buffer_{get,set}_name
+  * API: Implement `buffer_insert`
+  * API: Implement `buffer_is_valid`
+  * API: Implement `buffer_get_mark`
+  * Add new files to clint and fix reported errors
+  * API: Implement `window_get_buffer`
+  * API: Implement window_{get,set}_cursor
+  * API: Implement window_{get,set}_{height,width}
+  * API: Implement window_{get,set}_var
+  * API: Implement window_{get,set}_option
+  * API: Implement window_get_position
+  * API: Implement window_is_valid
+  * API: Implement tabpage_{get,set}_var
+  * API: Implement tabpage_get_window
+  * API: Implement tabpage_is_valid
+  * API: Implement tabpage_get_window_count
+  * API: Refactor vim_{get,set}_var
+  * API: Implement vim_get_vvar
+  * Use platform check for correct selection of khash type in helpers.c
+  * Add ${API_SOURCES} to `nvim-test` cmake target.
+
+  [ John Szakmeister ]
+  * Don't allow undefined references under Linux.
+
+  [ Thiago de Arruda ]
+  * Tell cmake to use `-isystem` third-party includes
+
+  [ Eliseo Martínez ]
+  * Introduce nvim namespace: Move files.
+  * Introduce nvim namespace: Fix build process.
+  * Introduce nvim namespace: Fix relative includes.
+  * Introduce nvim namespace: Fix project-local includes.
+  * Introduce nvim namespace: Fix unmasked strings.h issue.
+  * Introduce nvim namespace: Fix unit tests.
+  * Introduce nvim namespace: Fix functional tests.
+  * Introduce nvim namespace: Fix clint.
+  * Introduce nvim namespace: Fix localization.
+  * Introduce nvim namespace: Fix contrib youcompleteme.
+  * Introduce nvim namespace: Fix define guards.
+
+  [ Felipe Oliveira Carvalho ]
+  * s/GA_EMPTY/GA_EMPTY_INIT_VALUE/
+  * Replace ga->ga_len > 0 checks with !GA_EMPTY(ga)
+  * Replace ga->ga_len == 0 checks with GA_EMPTY(ga)
+  * Replace if (ga->ga_len) with if (!GA_EMPTY(ga))
+
+  [ Thiago de Arruda ]
+  * Remove hardcoded type names from msgpack-gen.lua
+  * Use `uintptr_t` as the hashtable type in helpers.c
+  * Refactor API to use one integer type: int64_t
+  * Use more descriptive names for API primitive types
+  * Enable -Wconversion for API files and fix errors
+  * Replace unnecessary `xcalloc` call by `xmalloc`
+  * Fix `xmemdup` function signature
+  * Removed `lalloc` prototype(again)
+  * Fixed outdated comment in option.c
+
+  [ Nicolas Hillegeer ]
+  * clint: disregard compound literal return
+  * api/helpers: implement C string to String helper
+
+  [ Justin M. Keyes ]
+  * Fix comment typo.
+  * Merge klib upstream.
+
+  [ Thiago de Arruda ]
+  * Improve map module: Add to clint and CONV_SRCS
+  * Improve map module: Fix implementation of map_has
+  * Improve map module: Change scopes
+  * Improve map module: Refactor into a macro library
+  * Improve map module: Refactor vim_to_object_rec
+
+  [ Eliseo Martínez ]
+  * Introduce vim namespace: Contrib YCM: Fix build dir calculation.
+  * Introduce vim namespace: Contrib YCM: Fix style issues.
+
+  [ Felipe Oliveira Carvalho ]
+  * Implement vim_str(n)save using xstrdup and strncpy/xmalloc
+  * Remove NULL/non-NULL tests after calls to vim_str(n)save()
+  * Replace alloc() with xmalloc() and remove immediate OOM checks
+  * Remove OOM checks: reverse_text()
+  * Remove OOM checks: mf_alloc_bhdr()
+  * Remove OOM checks: ml_new()
+  * Remove OOM checks: ml_new_data()
+  * Remove OOM checks: alloc_cmdbuff()
+  * Remove OOM checks: realloc_cmdbuff()
+  * Remove OOM checks: alloc_typebuf()
+  * Remove OOM checks: save_typebuf()
+  * Remove OOM checks: backslash_halve_save()
+  * truncate_line() cant't FAIL: change its return type to void
+  * Remove OOM checks: mark_line()
+  * Remove OOM checks: ff_create_stack_element()
+  * Remove OOM checks: u_save_line()
+  * Remove OOM checks: expand_tag_fname() and tag_full_name()
+  * Remove OOM checks: do_string_sub()
+  * Remove OOM checks: viminfo_filename()
+  * Remove OOM checks: suggested changes in review
+
+  [ John Schmidt ]
+  * Remove cryptography
+
+  [ Pavel Platto ]
+  * Remove OOM error handling in khash.h
+
+  [ oni-link ]
+  * vim-patch:7.4.285
+
+  [ Thiago de Arruda ]
+  * API: Cleanup: Remove unnecessary NULL checks
+  * API: Bugfix: Check that error isn't set in buffer_get_line
+  * API: Bugfix: Remove wrong increment statement from buffer_set_slice
+  * API: Bugfix: Fix loop condition in vim_list_runtime_paths
+  * API: Bugfix: Use 0-terminated string in vim_strwidth
+  * API: Bugfix: Terminate directory string in vim_change_directory
+  * API: Refactor: Move non-public files to private subdirectory
+  * API: Refactor: Implement api/handle module
+  * API: Refactor: Register/unregister created/destroyed buffers
+  * API: Refactor: Register/unregister created/destroyed windows
+  * API: Refactor: Register/unregister created/destroyed tabpages
+  * API: Refactor: Generalize buffer, window and tabpage types/functions
+  * API: Refactor: Add macro infrastructure for typed arrays
+  * API: Refactor: Change the integer type of remote objects to uint64_t
+  * API: Refactor: Return handles instead of indexes
+  * API: Refactor: Implement buffer_get_number
+  * API: Refactor: Use macro for initializing all arrays
+  * API: Refactor: Fix buffer_get_mark
+  * API: Test: Setup basic test infrastructure
+
+  [ Eliseo Martínez ]
+  * Remove long_u: do_outofmem_msg().
+  * Remove long_u: hashtab: Cleanup: Comments.
+  * Remove long_u: hashtab: Cleanup: Others.
+  * Remove long_u: hashtab: Enable -Wconversion.
+  * Remove long_u: hashtab: Refactor long_u type.
+  * Remove long_u: hashtab: Refactor other types.
+  * Remove long_u: hashtab: Enable clint: Sort clint file.
+  * Remove long_u: hashtab: Enable clint: Add to clint.
+
+  [ Rainer Borene ]
+  * Add Reddit link to README. ref #704
+
+  [ oni-link ]
+  * Simplify edit.c functions replace_{push,pop}.
+
+  [ Nicolas Hillegeer ]
+  * memory: add xstrlcpy
+  * coverity: fix BUFFER_SIZE_WARNING with str{n,l}cpy
+
+  [ Thiago de Arruda ]
+  * Dead code: Remove unused vimscript functions(from FEAT_CLIENTSERVER)
+  * API: Refactor: Duplicate/free string arguments coming from msgpack
+  * API: Refactor: Close/free channels when their streams reach EOF
+  * API: Events: Return channel id from the API discover request
+  * API: Events: Implement channel_send_event and vimscript wrapper
+  * Build: Add 'nonnull' attributes to msgpack_rpc functions
+  * Build: Add api/{helpers,handle}.c to CONV_SRCS
+  * Build: Add more files to clint-files.txt and fix errors
+  * Build: Enable valgrind's --leak-check when testing the API
+  * API: Bugfix: Remove memory leak from set_option_to
+  * API: Bugfix: Remove memory leak from buffer_set_slice
+  * API: Bugfix: Remove memory leak from buffer_set_name
+  * API: Bugfix: Remove memory leak from buffer_get_line
+  * Refactor: Remove support for multiple protocols
+
+  [ oni-link ]
+  * vim-patch:7.4.267
+
+  [ Eliseo Martínez ]
+  * Fix localization: Fix build: Fix dangling references.
+  * Fix localization: Fix build: Fix included source files.
+  * Fix localization: Fix build: Fix sed issue on OSX.
+  * Fix localization: Fix build: Fix sjis-fixing executable.
+  * Fix localization: Fix build: Improve checking.
+  * Fix localization: Fix po files.
+  * Fix localization: Update po files.
+
+  [ Thiago de Arruda ]
+  * Refactor: Use size_t for {w,r}streams.c
+  * WStream: Refactor: Use reference count for memory management
+  * Add kvec.h macro library
+  * API: Bugfix: Remove possible double-free in buffer_get_line
+  * API: Events: Add support for broadcasting events
+  * API: Events: Automatically pass channel ids to API functions
+  * API: Events: Add functions for {un}subscribing to broadcasted events
+  * Build: Fix autocmd removal from cleanup function
+  * Channel: Refactor: Extract serialize_event function
+  * Channel: Refactor: Extract register_channel function
+
+  [ Hinidu ]
+  * Extract cursor.h from misc{1,2}.h and memline.h
+
+  [ Pavel Platto ]
+  * Enable -Wconversion on cursor.c
+  * Remove ml_ prefix from cursor.h functions
+  * Add cursor.{c,h} to clint-files.txt
+  * Remove code duplication in get_cursor_rel_lnum
+
+  [ Hinidu ]
+  * Removed FEAT_WINDOWS
+  * Remove FEAT_DIFF
+  * Remove FEAT_MBYTE
+  * Remove FEAT_QUICKFIX
+  * Remove FEAT_AUTOCMD
+  * Remove FEAT_CINDENT
+  * Remove FEAT_BYTEOFF
+  * Remove FEAT_CMDL_COMPL
+  * Remove FEAT_CMDL_INFO
+  * Remove FEAT_CMDWIN
+  * Remove FEAT_COMMENTS
+  * Remove FEAT_COMPL_FUNC
+  * Remove FEAT_CON_DIALOG
+  * Remove FEAT_CURSORBIND
+  * Remove FEAT_EVAL
+  * Remove FEAT_EX_EXTRA
+  * Remove FEAT_LISTCMDS
+  * Remove FEAT_MENU
+  * Remove FEAT_SEARCHPATH
+  * Remove FEAT_SESSION
+  * Remove FEAT_STL_OPT
+  * Remove FEAT_FLOAT
+  * Remove FEAT_POSTSCRIPT
+  * Remove FEAT_GETTEXT
+  * Remove FEAT_TITLE
+
+  [ Pavel Platto ]
+  * Remove unused FEAT_*
+
+  [ John Szakmeister ]
+  * Add a few more sources to CONV_SRCS.
+  * Turn off -Werror by default.
+
+  [ Thiago de Arruda ]
+  * Refactor: Redefine `Map(T)` as a more generic `Map(T, U)` macro
+
+  [ John Szakmeister ]
+  * Make it easier to change CMAKE_BUILD_TYPE in your local.mk.
+
+  [ Justin M. Keyes ]
+  * Initialize Object, Position
+
+  [ Nicolas Hillegeer ]
+  * travis/coverity: add coverity support
+  * readme: add coverity scan badge
+  * travis/coverity: hotfix, alwasy return success
+  * travis/coverity: hotfix #2, unbreak build
+
+  [ John Szakmeister ]
+  * Make it easier to turn the bundled dependencies off.
+
+  [ Justin M. Keyes ]
+  * Fix unused variable when NDEBUG is defined.
+
+  [ Rui Abreu Ferreira ]
+  * Add --api-metadata command line option
+  * Rename --api-metadata to --api-msgpack-metadata
+
+  [ ZyX ]
+  * Move documentation from function declarations to definitions
+  * Add automatic generation of headers
+  * Remove remaining declarations with new script: finddeclarations.pl
+  * Surround nvim/func_attr.h includes with define/undef DEFINE_FUNC_ATTRIBUTES
+  * Make nvim/lib/k*.h headers be the last one in the list
+  * Add include guard to ex_cmds_defs
+  * Fix some styles
+  * Add missing include to mbyte.c
+  * Remove a number of unneeded func_attr includes
+  * Remove unneeded klist include in channel.c
+  * Move memory.h include above func_attr.h include
+  * Add REAL_FATTR_ macros to func_attr.h, use them in lib/k*
+  * Use generated headers in os.h
+  * Use generated static declarations in cursor.c
+
+  [ Thiago de Arruda ]
+  * Make gendeclarations.lua more friendly to incremental builds
+
+  [ Justin M. Keyes ]
+  * Fix diagrams in ex_cmds.c #798
+
+  [ oni-link ]
+  * vim-patch:7.4.277
+
+  [ Douglas Schneider ]
+  * vim-patch:7.4.275
+
+  [ oni-link ]
+  * vim-patch:7.4.280  #745
+  * vim-patch:7.4.281  #746
+  * vim-patch:7.4.282  #747
+  * vim-patch:7.4.284  #748
+  * vim-patch:7.4.286  #750
+  * vim-patch:7.4.288  #751
+  * vim-patch:7.4.289  #752
+  * Add more commented patch numbers to version.c (2)  #763
+
+  [ Justin M. Keyes ]
+  * Remove USE_CR and tag_fgets. #808
+
+  [ oni-link ]
+  * vim-patch:7.4.292  #754
+  * vim-patch:7.4.290  #753
+
+  [ Nicolas Hillegeer ]
+  * text/encoding: constify arguments
+  * text: remove useless arg from mb_string2cells
+  * msgpack: NULL terminate incoming strings
+  * api: remove some redundant string copies
+  * api: also NUL-terminate Strings made from cstrs
+  * api: unify string conversions, simplify interop
+
+  [ Brandon Coleman ]
+  * deleted unused defines in vim.h  #772
+
+  [ Andrew Chin ]
+  * Prevent null-pointer deference during vim_eval  #785
+
+  [ Wesley Wiser ]
+  * Add function attributes to functions in memory.h  #811
+
+  [ Felipe Oliveira Carvalho ]
+  * Declare garray iterators in the for() scope where possible #819
+
+  [ Nicolas Hillegeer ]
+  * coverity/62617: fix leak in set_string_default
+  * coverity/62615: fix leak in write_reg_contents_ex
+  * coverity/13770: add_keyword(), mark as false pos.
+  * coverity/13685: silence NUL-termnation fp
+
+  [ Sahat Yalkabov ]
+  * SVG coverage badge #821
+
+  [ Brandon Coleman ]
+  * move update_screen() flags to screen.h
+  * move values for find_pattern_in_path() to search.h
+  * move HL_* variables to syntax.h
+  * move VALID_* defines to buffer_defs.h
+  * move WILD_* defines to ex_getln.h
+  * move EW_* defines to path.h
+  * move FINDFILE_* defines to file_search.h
+  * move SST_* defines to syntax_defs
+  * move/remove W_* macros
+
+  [ Pavel Platto ]
+  * Remove unnecessary (int) casts and fix style
+
+  [ Brandon Coleman ]
+  * removed whitespace from  ROOT_UID define.
+
+  [ Will Stamper ]
+  * spelling fixes #827
+
+  [ Douglas Schneider ]
+  * Replace vim_strncpy calls: add STRLCPY
+  * Replace vim_strncpy calls: getchar.c
+  * Replace vim_strncpy calls: file_search.c
+  * Replace vim_strncpy calls: os_unix.c
+  * Replace vim_strncpy calls: misc2.c
+  * Replace vim_strncpy calls: ops.c
+  * Replace vim_strncpy calls: mark.c
+  * Replace vim_strncpy calls: os/users.c
+  * Replace vim_strncpy calls: os/fs.c
+  * Replace vim_strncpy calls: memline.c
+  * Replace vim_strncpy calls: path.c
+  * Replace vim_strncpy calls: option.c
+  * Replace vim_strncpy calls: menu.c
+  * Replace vim_strncpy calls: ex_getln.c
+  * Replace vim_strncpy calls: fold.c
+  * Replace vim_strncpy calls: regexp.c
+  * Replace vim_strncpy calls: if_cscope.c
+  * Replace vim_strncpy calls: quickfix.c
+  * Replace vim_strncpy calls: hardcopy.c
+  * Replace vim_strncpy calls: misc1.c
+  * Replace vim_strncpy calls: buffer.c
+  * Replace vim_strncpy calls: tag.c
+  * Replace vim_strncpy calls: syntax.c
+  * Replace vim_strncpy calls: spell.c
+  * Replace vim_strncpy calls: version.c
+  * Replace vim_strncpy calls: ex_docmd.c
+  * Replace vim_strncpy calls: screen.c
+  * Replace vim_strncpy calls: eval.c
+  * Replace vim_strncpy calls: message.c
+
+  [ Felipe Oliveira Carvalho ]
+  * No OOM in dict_alloc() and rettv_dict_alloc()
+  * No OOM in dictitem_alloc()
+  * No OOM in hash_may_resize() and hash_add_item()
+  * No OOM in dictitem_copy
+  * No OOM in listitem_alloc()
+  * No OOM in list_insert_tv() and list_extend()
+  * No OOM in save_cmdline_alloc()
+  * No OOM in autoload_name()
+  * No OOM in expand_shellcmd()
+  * No OOM in ExpandGeneric()
+  * do_map() won't return 4 (OOM) anymore
+  * No OOM in msg_show_console_dialog()
+  * au_get_grouparg() can't fail, remove error handling
+  * No OOM in popup_mode_name()
+  * No OOM in vim_strnsave_up()
+  * No OOM in vim_strsave_escaped[_ext]()
+  * No OOM in enc_canonize()
+  * No OOM in vim_strsave_fnameescape()
+  * No OOM in home_replace_save()
+  * No OOM in vim_strsave_escape_csi()
+  * No OOM in concat_str() (few remaining cases)
+  * No OOM in reverse_text()
+  * No OOM in ExpandOldSetting()
+  * Fix some "out of memory" comments and few cosmetics
+  * No OOM for list_alloc()
+  * Refator return logic in ses_put_fname()
+  * Remove unnecessary comments and unnecessary return
+
+  [ Thiago de Arruda ]
+  * msgpack_rpc: Deal with deserialization failures
+  * wstream: Change wstream_write failure behavior
+  * wstream: Refactor wstream_new_buffer/wstream_write
+  * rstream: Rename RStream `async` flag to `defer`
+  * rstream: Implement the rstream_set_defer function
+  * job: Refactor to use pointers instead of ids
+  * job: Add defer flag and setter method
+  * job: Refactor job_write to receive WBuffer instances.
+  * channel: Make channel_{un}subscribe abort the program for invalid ids
+  * events: Refactor event_poll to use stack-allocated timer handles
+  * events: Refactor how events are queued for processing
+  * build: Fix error in dispatch generator for functions with channel_id
+  * build: increase timeout for run-api-tests.exp
+  * api: Rename find_{buffer,window,tabpage}
+  * api: Change type of event data to `Object` from `typval_T`
+  * api: Enable usage of Arrays and Dictionaries as [k]vectors
+  * api: Add helper macros for dealing with API type casts
+
+  [ ZyX ]
+  * Avoid ever creating .deps directory
+  * test1.in is not a test and it must be run always
+  * Use MAKEOVERRIDES to pass SCRIPTS/TESTNUM arguments for `make test`
+  * Make indentation consistent: use 2-space indent always
+
+  [ Nikolay Orlyuk ]
+  * spatch to drop check after alloc/lalloc/xmalloc #690
+
+  [ Will Stamper ]
+  * coverity/68215: removed failed variable + dead code from f_readfile #860
+
+  [ Stefan Hoffmann ]
+  * move documentation output to build/doxygen
+  * add default doxygen 1.8.6 theme files
+  * update theme to match neovim.org
+  * update customdoxygen.css for doxygen 1.8.7
+
+  [ oni-link ]
+  * vim-patch:7.4.298  #815
+  * vim-patch:7.4.301  #816
+  * vim-patch:7.4.302  #817
+  * vim-patch:7.4.303  #818
+  * coverity/15010: Remove dead code.  #829
+
+  [ Pavel Platto ]
+  * Use generated declarations in cursor.h  #849
+
+  [ Justin M. Keyes ]
+  * update style guide URL
+
+  [ Thiago de Arruda ]
+  * event: Bail out of event_poll when any event is processed
+  * event: Decouple user input checks from `event_poll`
+  * job: Fix vimscript wrapper by returning when an invalid id is passed
+  * wstream: Refactor buffer memory management
+  * wstream: Use a default value of 10mb for `maxmem` when 0 is passed
+  * wstream: Make wstream_write consider the return value from uv_write
+  * job: Add a `maxmem` parameter to job_start
+  * channel: Extract 'channel_write' function
+  * channel: Extract function for sending errors that are not responses
+  * channel/msgpack_rpc: Refactor msgpack_rpc_notification/serialize_event
+  * channel: Implement the  'channel_send_call' function
+  * channel/msgpack_rpc: Refactor to better split functions across modules
+  * channel/msgpack_rpc: Refactor API dispatching
+
+  [ Justin M. Keyes ]
+  * Add LICENSE. fix #878. PR #883
+
+  [ John Szakmeister ]
+  * Fix #838: build with "USE_BUNDLED=OFF" fails to find dependencies
+  * Fix #867: cmake doesn't issue `-isystem` for versioned gcc
+
+  [ Stefan Hoffmann ]
+  * FileID: implement `FileID` struct
+  * FileID: remove `INVALID_DEVICE_ID` macro
+  * FileID: refactor buffer.c to use `FileID`
+  * FileID: refactor ex_cmds2.c to use `FileID`
+  * FileID: refactor file_search.c to use `FileID`
+  * FileID: refactor if_cscope.c to use `FileID`
+  * FileID: refactor path.c to use `FileID`
+  * FileID: refactor os_unix.c to use `FileID`
+  * FileID: make `os_stat()` static
+  * FileID: remove last use of `st_ino` in memline.c
+  * FileID: remove `CHECK_INODE` macro
+
+  [ Nicolas Hillegeer ]
+  * os: implement VimL libcall with {mch,os}_libcall
+  * os: remove legacy mch_libcall
+  * libcall: remove libcall ifdefs
+
+  [ Justin M. Keyes ]
+  * keep statusline within window width. @oni-link fix #858
+
+  [ Felipe Oliveira Carvalho ]
+  * ga_growsize should be >= 1
+  * Introduce GA_APPEND()
+  * Introduce ga_append_via_ptr() and GA_APPEND_VIA_PTR()
+
+  [ Justin M. Keyes ]
+  * clarify LICENSE and README #899
+  * README: fix links
+
+  [ Rui Abreu Ferreira ]
+  * Remove pthread fatal check from CMakeLists.txt #891
+
+  [ Justin M. Keyes ]
+  * README: Add Bountysource badge. #854
+  * LICENSE: add LuaJIT notice. #899
+
+  [ Eduardo Elias Ferreira ]
+  * Update pt_BR translation: Sync to a3214803429e05635cbfbe8b3050a73406da6bc6
+  * Update pt_BR translation: Improve translations.
+
+  [ Florian Walch ]
+  * Update German translation: Sync to 9f1b9726fb28f78fba7c50efa5316c4bf2413cf8.
+  * Update German translation: Improve translations.
+
+  [ Rui Abreu Ferreira ]
+  * Remove include for sys/select.h in vim.h #890
+
+  [ Felipe Oliveira Carvalho ]
+  * MsgPack-RPC dispatch based on function array lookup #864
+
+  [ Nicolas Hillegeer ]
+  * cmake: upgrade libuv 0.11.23 -> 0.11.26 #911
+
+  [ Rui Abreu Ferreira ]
+  * Add vim_feedkeys API function
+
+  [ Thiago de Arruda ]
+  * dispatch function generator: Fix bug in validation/initialization
+
+  [ Rui Abreu Ferreira ]
+  * Removed unnecessary PATHS from cmake modules
+
+  [ Xu Cheng ]
+  * neovim.rb: modernize the style
+  * neovim.rb: improve dependency
+
+  [ Klemen Košir ]
+  * Replace int with bool in some files. #654
+  * Replaced most TRUE/FALSE macros in arabic, mbyte and spell. #645
+
+  [ Brandon Coleman ]
+  * remove proto.h include from vim.h
+  * remove stdbool.h include from vim.h and globals.h
+  * move memory.h include to version.c
+  * move ascii.h include out of vim.h
+  * move locale.h include out of vim.h
+  * move <inttypes.h> include out of vim.h
+  * move wctype.h include out of vim.h
+  * move assert.h include out of vim.h
+  * move stdarg.h include out of vim.h
+  * move errno.h include out of vim.h
+
+  [ Fredrik Fornwall ]
+  * Fix two android compile errors in fs.c #924
+  * Avoid linking with libform(w).so
+  * Default 'encoding'-option from latin to utf-8 #935
+
+  [ Nicolas Hillegeer ]
+  * c99: remove vim_round #909
+
+  [ oni-link ]
+  * vim-patch:7.4.291 #879
+
+  [ Will Stamper ]
+  * vim-patch:7.4.295 #833
+  * vim-patch:7.4.306 #842
+  * vim-patch:7.4.308 #832
+
+  [ Shane Iler ]
+  * Enable and fix misc2.c -Wconversion warnings #907
+
+  [ Björn Linse ]
+  * Update Swedish (sv) translation: Sync to 11653ce2d7789ad1ccf31b37c12589cf1cb7787f
+  * Update Swedish (sv) translation: improve translations.
+
+  [ Pavel Platto ]
+  * Include stdbool.h in some files which use it
+  * Remove stdbool.h from files which don't need it
+  * Include stdbool.h in headers which have functions with bool in signature
+
+  [ Rui Abreu Ferreira ]
+  * Refactor the lua dependency checking.
+  * Check dependencies for each lua interpreter.
+
+  [ Brandon Coleman ]
+  * move defines from vim.h
+
+  [ André Twupack ]
+  * os/server: Fix indentation
+  * os/server: Fix TCP connection
+  * os/server: Fix possible port overflow
+
+  [ Justin M. Keyes ]
+  * os_open: impl mch_open with libuv. ref #133
+  * os_open: add unit tests
+
+  [ Pavel Platto ]
+  * Use default busted pattern for unittests #943
+  * Use strict function prototypes #945
+  * Temporary os_mkdtemp implementation. Use it instead of mkdtemp.
+  * Remove HAVE_MKDTEMP
+  * Remove USE_TMPNAM
+  * Remove #ifdefs TEMPDIRNAMES and add TEMPDIRNAMES for Windows
+  * Refactor vim_tempname
+  * Add vim_gettempdir(), remove global vim_tempdir
+  * Extract `tempfile` module from fileio
+  * tempfile.c: add tests
+  * tempfile.c: add to clint-files and fix warnings
+  * tempfile.c: enable -Wconversion
+  * tempfile.c: fix style issues and comments
+  * tempfile.c: refactor vim_settempdir
+  * Create os/os_defs.h for os specific definitions
+
+  [ oni-link ]
+  * Add more commented patch numbers to version.c (3) #940
+
+  [ Rui Abreu Ferreira ]
+  * Add cmake platform checks
+  * Clean up DEBUG check in config.h.in
+
+  [ Florian Walch ]
+  * travis.sh: Fix mixed tabs/whitespace formatting.
+  * travis.sh: Use dependencies from neovim/deps.
+  * travis.sh: Simplify clang/asan build.
+
+  [ Nicolas Hillegeer ]
+  * assert: add STATIC_ASSERT macro
+  * os: implement os_hrtime
+  * profiling: implement on top of os_hrtime()
+  * profiling: move static to function scope
+  * profiling: add tests
+
+  [ Justin M. Keyes ]
+  * doc: add clang analysis badge to README.md
+
+  [ Nicolas Hillegeer ]
+  * hashtab.h: don't include vim.h
+  * vim: move long_u from vim.h to types.h
+  * vim: move linenr_T and colnr_T to pos.h
+  * vim: move disptick_T from vim.h to syntax_defs.h
+  * test/preprocess: always declare EXTERN
+  * vim: move vim_acl_T to types.h
+  * memory.h: don't include vim.h in header files
+  * test/helpers: add 'vim_init' helper
+  * test/fs: move tests of path_full_dir_name to path
+  * vim: include used definitions in headers
+
+  [ John Szakmeister ]
+  * travis.sh: move symbolizer definition into common area
+  * Move po generation from Make to CMake.
+  * Customize the log file for the check targets based on the input file.
+  * Revert "Merge #928 'Move po gen to cmake'"
+  * Customize the log file for the check targets based on the input file.
+  * Move po generation from Make to CMake.
+  * Fix some newline issues in the sv translation.
+
+  [ Pavel Platto ]
+  * Fix #963.
+
+  [ Thiago de Arruda ]
+  * wstream: document default value for 'maxmem'
+  * wstream: Pass WBuffer refcount as a constructor parameter
+  * api: Refactor write_msg to use separate out/err buffers
+  * channel: Refactor channel_from_job to return the channel id
+  * channel: Implement channel_exists function
+  * job: No longer free the job data. It's now done by the exit callback
+  * channel: Bugfixes and refactor
+  * provider: New module used to expose extension points for core services
+  * provider: Add support functions for calling external interpreters
+  * provider: Add support for python commands/functions
+  * provider: Add support for clipboard registers.
+  * api: make buffer_{get,set}_slice automatically assume `include_end`
+  * getchar: fix infinite loop due to pending events
+  * api/events/msgpack: Insert log statements to improve debugging
+  * events: Refactor how event deferral is handled
+  * api tests: set 'initpython' in BeforeEachTest
+
+  [ Nicolas Hillegeer ]
+  * types: typedef long_u as uintptr_t #961
+
+  [ Wesley Wiser ]
+  * coverity/62610: Remove dead code from setfname()
+
+  [ Nicolas Hillegeer ]
+  * startuptime: move code to profile.{c,h} + doc
+  * startuptime: implement on top of profiling fns
+  * garray: add necessary includes
+  * globals.h: decouple vim.h and globals.h
+  * startuptime: always enable startuptime
+  * startuptime: print vim -> nvim
+  * os/time: include time.h in os/time.h
+  * os/time: make os_get_localtime more portable
+  * os/time: fix os_localtime_r on win + add func_attr
+  * viml: re-add sha256() function
+  * sha256: replace gettimeofday()
+  * term: replace gettimeofday()
+  * cmake: remove check for gettimeofday
+
+  [ Wayne Rowcliffe ]
+  * Statically allocate NameBuff
+  * Change buffer.h #defines to enums so they can be used in tests
+  * Add tests for buffer.c and fileio.c
+
+  [ Nicolas Hillegeer ]
+  * func_attr: clang/icc support NONNULL_* attr
+
+  [ oni-link ]
+  * Fix memory leak in provider_call.
+  * Fix memory leaks for jobs.
+
+  [ Andrew Chin ]
+  * message: add missing stdarg.h include #993
+
+  [ ZyX ]
+  * build: Compile static luajit lib with -fPIC #996
+
+  [ Wayne Rowcliffe ]
+  * Minor buffer.c style cleanups
+
+  [ Nicolas Hillegeer ]
+  * os/shell: constify arguments
+  * job: implement job_wait()
+  * wstream: write completion callback
+  * wstream: allow empty release wbuffer cb
+  * job: add in-pipe notification and closing support
+  * os/shell: implement os_system
+  * eval: reimplement f_system() on top of os_system()
+  * job: increase JOB_BUFFER_SIZE to 0xFFFF
+  * rstream: remove 'reading' struct member
+  * test/formatc: improve 'inline' function handling
+  * test/formatc: improve standalone usage
+  * test/helpers: allow interning Pascal strings
+  * test/shell: add tests
+
+  [ Justin M. Keyes ]
+  * re-integrate runtime/  vim-patch:0  #938
+
+  [ oni-link ]
+  * Remove unused arg 'defer' in 'job_start' #1000
+
+  [ Fredrik Fornwall ]
+  * Remove FEAT_MOUSE_JSB
+
+  [ Nicolas Hillegeer ]
+  * eval: re-remove USE_CR #1002
+
+  [ Scott Prager ]
+  * Units: Move NULL, OK, and FAIL to helpers.moon. #982
+
+  [ Nicolas Hillegeer ]
+  * eval: re-add has('mac') and has('macunix') #976
+
+  [ Justin M. Keyes ]
+  * doc: Remove 'textmode'
+  * runtime: Remove 'textauto'
+  * doc: Remove "h" flag of 'highlight' option
+
+  [ Rui Abreu Ferreira ]
+  * Change vimdir path from vim to neovim
+  * Add install target for runtime dir
+
+  [ Will Stamper ]
+  * vim-patch:7.4.309 #843
+
+  [ Florian Walch ]
+  * Update luarocks. #1018
+
+  [ Fredrik Fornwall ]
+  * Partial C99 cleanup of term.c #1020
+
+  [ Pavel Platto ]
+  * Remove BeOS DR8 specific hack
+  * Remove BEOS_PR_OR_BETTER
+  * Show +cursorshape in :version
+  * Remove DONT_ADD_PATHSEP_TO_DIR used only in legacy Mac
+  * Remove EBCDIC: Clean up comments
+  * Remove EBCDIC: remove last #ifdef EBCDIC
+  * Remove EBCDIC: Remove IF_EB macros
+  * Remove FEAT_OSFILETYPE
+  * Remove FEAT_TAG_ANYWHITE
+  * Remove HAVE_TOTAL_MEM
+  * Remove HAVE_LIBC_H
+  * Remove __MVS__ and MOTIF390_MNEMONIC_FIXED
+  * Remove SMALL_MALLOC. Used on MSDOS and WIN16.
+  * Remove fix for select(). select() is not used anymore.
+
+  [ Wayne Rowcliffe ]
+  * Add FOR_ALL_BUFFERS helper
+
+  [ André Twupack ]
+  * vim-patch:7.4.315 #1021
+
+  [ Scott Prager ]
+  * vim-patch:7.4.279
+
+  [ Justin M. Keyes ]
+  * Update README.md
+
+  [ Florian Walch ]
+  * travis.sh: Update sources before installing packages.
+
+  [ Thiago de Arruda ]
+  * bugfix: set empty string as default for ipy/icpb to avoid segfault
+
+  [ Wayne Rowcliffe ]
+  * Return bool from find_win_for_buf #1023
+
+  [ Fredrik Fornwall ]
+  * Drop SGI IRIS support. #1006
+
+  [ Stefan Hoffmann ]
+  * documentation: update documentation for :mode  #1009
+
+  [ Fredrik Fornwall ]
+  * Remove unused USE_TERM_CONSOLE ifdefs #1015
+
+  [ ZyX ]
+  * Use color_terminal output in place of TAP #995
+
+  [ Florian Walch ]
+  * clang-analyzer: Fix dead stores in window.c.
+  * clang-analyzer: Reduce scope in spell.c.
+  * clang-analyzer: Reduce scope in screen.c.
+  * clang-analyzer: Reduce scope in search.c.
+  * clang-analyzer: Reduce scope in arabic.c.
+  * clang-analyzer: Reduce scope in syntax.c.
+  * clang-analyzer: Fix dead stores in garray.c.
+
+  [ Thiago de Arruda ]
+  * dependencies: Update to libuv 0.11.28
+
+  [ Rui Abreu Ferreira ]
+  * Add helper cstr_as_string()
+  * Refactor vim_feedkeys and f_feedkeys
+  * Add API vim_replace_termcodes
+
+  [ André Twupack ]
+  * vim-patch:7.4.323 #967
+
+  [ Thiago de Arruda ]
+  * Travis CI: Refactor travis script
+
+  [ Pavel Platto ]
+  * Implement `os_mkdtemp` on top of `uv_fs_mkdtemp`
+  * documentation: Update tempfile and tempname()
+
+  [ Thiago de Arruda ]
+  * build/test: setup functional tests using vroom
+  * build/test: setup vroom installation on travis
+
+  [ Pavel Platto ]
+  * os_fchown: impl and remove HAVE_FCHOWN
+  * os_fchown: add unit tests
+  * os_fchown: enable 'change group' unittest on Travis-CI
+  * Travis-CI: fix "Could not find compiler" in clang-asan
+
+  [ André Twupack ]
+  * vim-patch:7.4.331 #1017
+  * vim-patch:7.4.327 #1010
+
+  [ Manish Raghavan ]
+  * coverity/71508: Fix potential null dereference.
+
+  [ André Twupack ]
+  * vim-patch:7.4.335 #1061
+  * vim-patch:7.4.328
+
+  [ Damián Silvani ]
+  * vim-patch:7.4.293
+  * vim-patch:7.4.294
+  * vim-patch:7.4.314
+
+  [ André Twupack ]
+  * vim-patch:7.4.201
+
+  [ Pavel Platto ]
+  * os_fchown: remove cast of parameter -1 to uid_t
+
+  [ Wayne Rowcliffe ]
+  * FOR_ALL_BUFFERS use locally declared buffer pointer
+
+  [ Justin M. Keyes ]
+  * version.c: mark irrelevant patches with "NA" #1074
+
+  [ André Twupack ]
+  * vim-patch:7.4.318 #968
+
+  [ Scott Prager ]
+  * Use sizeof over magic numbers.
+  * path.c: Learn invocation_path_tail().
+  * Doxygen/comment style for make_filter_cmd().
+  * vim-patch:7.4.276
+
+  [ Fredrik Fornwall ]
+  * Make ttyfast default to true on all terminals #1051
+  * Remove os_msdos.txt due to dropped MS-DOS support
+
+  [ Justin M. Keyes ]
+  * vim-patch:7.4.325 #1078
+  * vim-patch:7.4.329 #1079
+
+  [ André Twupack ]
+  * vim-patch:7.4.231
+
+  [ Paul Burlumi ]
+  * coverity/13749: fix negative array index read in unset_global_local_option
+
+  [ Justin M. Keyes ]
+  * vim-patch:7.4.317 #1076
+
+  [ Felipe Morales ]
+  * Port vim's patch 7.4.338 ('breakindent')
+  * vim-patch: 7.4.346
+  * vim-patch: 7.4.353
+  * vim-patch:7.4.371
+  * vim-patch:7.4.370
+  * vim-patch:7.4.388
+  * vim-patch: 7.4.352
+  * update src/nvim/testdir/Makefile
+
+  [ ZyX ]
+  * Use lua generator in place of ex_cmds_defs header trick
+  * Add const qualifier and explicit length
+  * Fix problem with test47: addition is not bitwise OR
+  * Extend documentation
+
+  [ Florian Walch ]
+  * Readme: Fix clang badge URL.
+
+  [ André Twupack ]
+  * vim-patch:7.4.296
+  * vim-patch:7.4.339
+
+  [ Florian Walch ]
+  * Runtime: Support Arch Linux/Pacman file types.
+
+  [ Justin M. Keyes ]
+  * upgrade luarocks
+
+  [ Pavel Platto ]
+  * Mark patches 176, 185 and 189 as NA
+  * vim-patch:7.4.220
+
+  [ Joey Gouly ]
+  * Set the policy to 'OLD' to avoid warning CMP0026 in CMake 3.0.
+
+  [ Florian Walch ]
+  * CMake: Generate helptags during install step.
+  * CMake: Use DESTDIR for helptags generation.
+
+  [ Paul Burlumi ]
+  * coverity/62620: fix uninitialized scalar variable
+
+  [ Will Stamper ]
+  * Spelling fixes
+
+  [ Fredrik Fornwall ]
+  * Remove version{4,5,6,7}.txt
+
+  [ Justin M. Keyes ]
+  * Update CONTRIBUTING.md and README.md #740
+
+  [ Thiago de Arruda ]
+  * test: Remove cleanup function definition from run-api-tests.exp
+  * wstream: Implement wstream_set_file
+  * channel: Fix channel not being closed when the RStream reaches EOF
+  * channel: fix channel buffer size
+  * channel: Implement channel_from_stdio function
+  * api: Implement '--embedded-mode' command-line option
+  * test: Run tests in embedded mode on travis
+
+  [ Justin M. Keyes ]
+  * clang: Null pointer passed as an argument to a 'nonnull' parameter #1090
+
+  [ Rui Abreu Ferreira ]
+  * Add 'bit' to the list of lua dependencies
+
+  [ Florian Walch ]
+  * Update luarocks: Use commit with correct version number.
+
+  [ Thiago de Arruda ]
+  * msgpack-rpc: Accept method names in requests
+  * msgpack-rpc: Always use arrays when sending events or calls
+  * Fix environment variable for triggering embedded tests
+
+  [ Justin M. Keyes ]
+  * clang: Null pointer passed as an argument to a 'nonnull' parameter
+
+  [ Thiago de Arruda ]
+  * channel: Remove code for automatically closing in channel_send_call
+  * unittest: convert garray_spec.moon to lua
+  * unittest: convert helpers.moon to lua
+  * unittest: convert env_spec.moon to lua
+  * unittest: convert fs_spec.moon to lua
+  * unittest: convert path_spec.moon to lua
+  * unittest: convert users_spec.moon to lua
+  * unittest: convert preprocess.moon to lua
+  * unittest: convert set.moon to lua
+  * unittest: Remove remaining moonscript references
+  * build: Remove moonscript as a third-party build dependency
+
+  [ Stefan Hoffmann ]
+  * unittest: Move FileInfo tests one level up
+  * fileinfo: implement os_fileinfo_size
+  * fileinfo: implement os_fileinfo_hardlinks
+  * fileinfo: implement os_fileinfo_blocksize
+  * fileinfo: rename os_get_file_info{,_link,_fd}
+  * fileinfo: rename os_file_info_id_equal
+  * fileinfo: rename os_file_info_get_id
+  * fileinfo: rename os_file_info_get_inode
+  * fileid: rename os_get_file_id
+  * fileid: rename os_file_id_equal
+  * fileid: rename os_file_id_equal_file_info
+  * fileinfo: change returntype of os_fileinfo_size
+
+  [ Felipe Morales ]
+  * vim-patch: 7.4.330
+  * vim-patch: 7.4.334
+  * vim-patch: 7.4.362
+  * vim-patch: 7.4.343
+  * vim-patch: 7.4.344
+
+  [ Maxim Kot ]
+  * README.md: link to libuv Reference to libuv was made a link
+
+  [ Wayne Rowcliffe ]
+  * Convert FOR_ALL_WINDOWS to use a locally declared pointer
+  * Additional FOR_ALL_WINDOWS usage
+
+  [ Scott Prager ]
+  * vim-patch:7.4.278
+
+  [ Shougo Matsushita ]
+  * Fix version numbers
+
+  [ André Twupack ]
+  * vim-patch:7.4.337
+  * vim-patch:7.4.345
+
+  [ Justin M. Keyes ]
+  * unit tests: helpers.lua: hack to avoid empty popen() result
+  * unit tests: avoid global scope; add missing cimports
+  * unit tests: initialize everything
+
+  [ Florian Walch ]
+  * CMake: Use CMAKE_C_COMPILER_ARG1 when building dependencies.
+  * Travis: Add subdirectories to dependency paths.
+  * Update busted to 2.0.rc3.
+
+  [ André Twupack ]
+  * vim-patch:7.4.348
+  * vim-patch:7.4.349
+
+  [ Thiago de Arruda ]
+  * deps: Update to the experimental msgpack v5 branch
+  * map/msgpack-rpc: Declare/define maps rpc method handlers
+  * msgpack-rpc: Refactor initializer and dispatcher
+  * msgpack-rpc: Move handle_missing_method to msgpack_rpc.c
+  * msgpack-rpc: Refactor API metadata discovery method
+  * msgpack-rpc: Remove support for integer ids in methods
+  * memory: Use i18n messages for memory-related errors
+  * msgpack-rpc: Remove the `msgpack_rpc_unpack` function
+  * api/msgpack-rpc: Remove specialized array types
+  * api/msgpack-rpc: Parse type information from api/private/defs.h
+  * api/msgpack-rpc: Use EXT type to serialize Buffer/Window/Tabpage
+  * api/msgpack-rpc: Remove Position type, using arrays instead.
+  * api/msgpack-rpc: Refactor msgpack_rpc_helpers.{c,h}
+  * main: Rename --embedded-mode and --api-msgpack-metadata options
+  * api/msgpack-rpc: Expose channel_from_job to vimscript as api_spawn
+  * job: Fix crash when passing a non-executable path to job_start
+  * wstream: Fix close/free
+  * api/msgpack-rpc: Implement `channel_close` and expose to vimscript
+  * provider: Major refactor
+  * runtime: Add script for bootstrapping the python host
+  * api: initialize capacity in the array_dict_macro
+  * api: Implement `vim_report_error` function
+  * api/msgpack-rpc: Refactor metadata object construction
+  * api metadata: Allow typed container information in api functions
+  * build/test: install vroom/python-client from the master branch
+
+  [ André Twupack ]
+  * vim-patch:7.4.376
+  * ex_cmds2.c:fix for issue #1164
+  * vim-patch:7.4.341
+  * vim-patch:7.4.347
+  * vim-patch:7.4.351
+  * vim-patch:7.4.358
+
+  [ Scott Prager ]
+  * vim-patch:7.4.312
+
+  [ Thiago de Arruda ]
+  * server: Rename address environment variable
+  * eval.c: Rename jobwrite to jobsend
+  * eval.c: Rename msgpack-rpc functions for consistency
+  * runtime: Enhance help.vim to highlight Nvim/NVIM
+  * runtime: Initial msgpack-rpc documentation
+  * runtime: Initial job control documentation
+  * runtime: Add highlighting for new functions/events
+  * runtime: Update python_setup.vim to the new rpc function names
+  * runtime: Document 'unnamedclip'
+  * runtime: Document python interface, clipboard and add intro doc
+
+  [ Scott Prager ]
+  * 7.4.371
+
+  [ John Szakmeister ]
+  * third-party: avoid using `rm` in the install command
+
+  [ Naveen Kumar Molleti ]
+  * vim-patch:7.4.387
+
+  [ Thiago de Arruda ]
+  * eval.c: Rename has('neovim') feature to has('nvim')
+  * runtime: Some nvim documentation fixes pointed by @oni-link
+  * runtime: Make python_setup.vim compatible with python 2.6
+
+  [ Shougo Matsushita ]
+  * vim-patch:7.4.368
+
+  [ Thiago de Arruda ]
+  * deps: Update msgpack
+  * runtime: Fix one of python sanity checks
+  * msgpack-gen: Fix msgpack_rpc_init_function_metadata
+  * deps: Switch lua msgpack library to one that supports 2.0
+  * channel: Fix unpacker loop condition
+
+  [ Shougo Matsushita ]
+  * vim-patch:7.4.369
+
+  [ Damián Silvani ]
+  * vim-patch:7.4.310
+  * vim-patch:7.4.313
+
+  [ Scott Prager ]
+  * path: learn save_absolute_path().
+  * vim-patch:7.4.235
+  * update os_can_exe unit test
+
+  [ Shougo Matsushita ]
+  * vim-patch:7.4.379
+  * vim-patch: 7.4.381
+  * vim-patch:7.4.383
+  * vim-patch:7.4.392
+
+  [ André Twupack ]
+  * vim-patch:7.4.365
+  * vim-patch:7.4.372
+  * vim-patch:7.4.373
+  * vim-patch:7.4.377
+
+  [ Thiago de Arruda ]
+  * api/msgpack-rpc: Improve error infrastructure
+
+  [ Shougo Matsushita ]
+  * vim-patch:7.4.361
+  * vim-patch:7.4.364
+  * vim-patch:7.4.374
+  * vim-patch:7.4.410
+  * vim-patch:7.4.382
+
+  [ André Twupack ]
+  * vim-patch:7.4.407
+
+  [ Scott Prager ]
+  * vim-patch:7.4.305
+  * vim-patch:7.4.359
+
+  [ Stefan Hoffmann ]
+  * doc: remove reference to config.mk, hangulin.txt
+  * doc: remove generated manpages
+  * doc: remove some unnecessary targets
+  * doc: remove encoding conversion targets
+  * doc: rename `*.UTF-8.1` files
+  * doc: remove uganda.nsis.txt target
+  * doc: move manpages into their own folder
+  * doc: remove links that point nowhere
+  * doc: update gitignore
+  * doc: use `cat` instead of `more` to display errors
+  * doc: add new doc files to Makefile
+
+  [ Shougo Matsushita ]
+  * Update version.c to Vim 7.4.444
+
+  [ André Twupack ]
+  * vim-patch:7.4.360
+  * vim-patch:7.4.320
+
+  [ Stefan Hoffmann ]
+  * doc: fix links to index.html and vimindex.html
+
+  [ John Szakmeister ]
+  * runtime: fix executable bit on some files
+  * build: install with the correct permissions
+
+  [ Wayne Rowcliffe ]
+  * FOR_ALL_TABS helper
+  * FOR_ALL_WINDOWS_IN_TAB and local variables in FOR_ALL_TAB_WINDOWS
+  * Expand FOR_ALL_WINDOWS to FOR_ALL_WINDOWS_IN_TAB(curtab)
+
+  [ André Twupack ]
+  * vim-patch:7.4.386
+  * vim-patch:7.4.411
+
+  [ Marco Hinz ]
+  * vim-patch:7.4.405
+  * vim-patch:7.4.454
+  * Update version.c to 7.4.454
+
+  [ Paul Jolly ]
+  * Only use CMAKE_C_COMPILER_ARG1 if it is set
+
+  [ André Twupack ]
+  * vim-patch:7.4.391
+
+  [ Wayne Rowcliffe ]
+  * Replace FOR_ALL_WINDOWS with FOR_ALL_WINDOWS_IN_TAB(curtab)
+  * Remove W_NEXT use `->w_next`
+
+  [ joshhartigan ]
+  * clang: Division by zero
+
+  [ Thiago de Arruda ]
+  * test: Replace vroom by lua/busted for functional tests
+  * travis: Refactor {valgrind,asan}_check functions
+
+  [ Scott Prager ]
+  * memory: xstrchrnul and xmemscan.
+  * memory: memchrsub and strchrsub
+  * vim-patch:7.4.247
+  * vim-patch:7.4.248
+  * Return list from rettv_list_alloc.
+  * vim-patch:7.4.256
+  * Old-style test for system(list).
+  * Fix system() output truncation bug.
+  * Implement save_tv_as_string to assist in #1176.
+
+  [ Paul Jolly ]
+  * Use line-specific method names where possible to remove ambiguity and possibility of future clashes
+
+  [ Thiago de Arruda ]
+  * test: Move 'test/legacy' to 'test/functional'
+  * test: Add 'eval' functional helper
+  * test: Add some specs for the viml function `system()`
+  * travis: Fix clang-asan to always display memory errors
+  * eval: Fix `save_tv_as_string` to handle non-string types
+  * wstream/shell: Fix memory errors caused by os_system
+
+  [ Daniel Kosinski ]
+  * vim-patch:7.4.444
+
+  [ Joseph Anthony Pasquale Holsten ]
+  * Removes shelltype option and all revelant doc. #1249
+
+  [ Stefan Hoffmann ]
+  * doc: remove legacy os_*.txt
+  * doc: remove gui_w16.txt
+  * doc: remove if_sniff.txt
+  * doc: remove if_ole.txt
+  * doc: remove workshop.txt
+  * doc: remove netbeans.txt
+  * doc: remove documentation for `:shell`
+  * doc: cleanup
+  * doc: remove links to non existent files
+
+  [ Scott Prager ]
+  * Mark patches 363 and 366 NA.
+  * vim-patch:7.4.375
+
+  [ Tayler Mulligan ]
+  * homebrew: use Makefile-defined defaults. #1259
+
+  [ Justin M. Keyes ]
+  * version: update user-facing version indicators
+  * version: remove "Included patches" message
+  * version: remove non-functional Vim version identifiers
+  * version: report commit hash as "build number" in long version string
+  * version: generate "build number" from commit timestamp
+  * version: remove "Compilation" and "Linking" messages.
+
+  [ Florian Walch ]
+  * homebrew: fix install prefix
+
+  [ Scott Prager ]
+  * vim-patch:7.4.397
+  * vim-patch:7.4.408
+
+  [ Xu Cheng ]
+  * homebrew: look for .git/ outside of build workspace #1274
+
+  [ Justin M. Keyes ]
+  * cmake: handle missing git or .git/
+
+  [ Naveen Kumar Molleti ]
+  * vim-patch:7.4.436 #1246
+  * vim-patch:7.4.439 #1245
+  * vim-patch:7.4.440 #1244
+
+  [ Thiago de Arruda ]
+  * deps: Add lua nvim-client as a dependency
+  * test: Remove run-functional-tests.py
+  * test: Use lua to perform sanity API checks
+
+  [ Scott Prager ]
+  * vim-patch:7.4.418
+
+  [ John Szakmeister ]
+  * Add missing linker flags required for LuaJIT on 64-bit Mac OS X.
+
+  [ Scott Prager ]
+  * server: Improve error reporting.
+
+  [ Thiago de Arruda ]
+  * rstream: Extract some RStream functionality to RBuffer
+  * ui: Refactor input buffer handling
+  * rstream: Initialize 'rstream' field in RBuffer class
+  * rstream: Add rbuffer_read_ptr/rbuffer_write_ptr functions
+
+  [ Eliseo Martínez ]
+  * Improve YCM contrib: Fix 'no newline at end of file' issue.
+  * Improve YCM contrib: Improve documentation.
+
+  [ Victor Fonseca ]
+  * coverity/71507: Unchecked return value (CHECKED_RETURN)
+
+  [ Florian Walch ]
+  * CMake: Set execute permissions during installation.
+
+  [ Jeff Widman ]
+  * version: remove "Running in Vi compatible mode" message #1309
+
+  [ Victor Fonseca ]
+  * Fix sign column redraw
+
+  [ Jeff Widman ]
+  * A few fixes for YCM contrib docs and code
+
+  [ Thiago de Arruda ]
+  * msgpack-rpc: Create subdirectory for msgpack-rpc modules
+  * channel: Simplify resource management
+  * event: Remove EventType enum and pass a callback to `event_push`
+  * event: Remove automatic event deferall
+  * event: Extract event_poll loops to `event_poll_until` macro
+  * eval: Defer execution of JobActivity autocommands
+  * msgpack-rpc: Allow selective deferral API calls
+  * api: Add FUNC_ATTR_DEFERRED attribute to a number of functions
+  * compilation: Add -Wconversion to more files and validate CONV_SOURCES
+  * travis: Remove `install_functional_test_deps` function
+  * event: Remove direct calls to `uv_run` from job.c/shell.c
+  * input: Don't remove Ctrl+C from the input_buffer
+  * test: verify that v:shell_error is set by `system()`/`systemlist()`
+  * input: Fix ctrl+c handling in convert_input
+  * travis: Force verification of DLOG macros
+  * debug: Fix broken DLOG macro calls
+  * debug: Improve debugging of msgpack-rpc requests
+
+  [ Nate Sullivan ]
+  * legacy tests: migrate test35. #1318
+
+  [ Scott Prager ]
+  * vim-patch:7.4.406
+  * version: More NA patches.
+  * version: update patches to 488
+  * vim-patch:7.4.422
+
+  [ Thiago de Arruda ]
+  * runtime: Fix rpcstop call in python_setup.vim
+  * msgpack-rpc: Ensure stdio channels are properly closed
+  * msgpack-rpc: Fix error handling and leak in call_request_handler
+  * job: Refactor to ensure that all callbacks will be invoked
+  * travis: Setup xvfb for running xclip tests
+  * job: Only decrease refcount after `settmode` in `job_wait`
+  * msgpack-rpc: Improve logging of msgpack-rpc messages
+  * test: verify that msgpacks-rpc exceptions are working
+
+  [ Scott Prager ]
+  * vim-patch:7.4.433
+  * version: Mark patch 430 NA.
+
+  [ Thiago de Arruda ]
+  * channel: fix `REQ` definition for msgpack-rpc logging
+  * msgpack-rpc: Terminate server->client calls when the channel closes
+  * test: Small fixes and improvements to functional helpers.lua
+  * input: Fix conversion error in `convert_input()`
+
+  [ Scott Prager ]
+  * job/valgrind: Fix invalid reads/missing free.
+  * job_start: Do not close in/out/err on error.
+  * test/shell: Add failure tests for `system()`.
+  * test/job: Implement some basic jobs tests.
+
+  [ Thiago de Arruda ]
+  * api: Implement vim_command_output function
+
+  [ Kartik K. Agaram ]
+  * fix 'sign unplace id'
+
+  [ Justin M. Keyes ]
+  * fix #1027: :wundo segfault in new, non-empty buffer
+
+  [ Thiago de Arruda ]
+  * input/job: process ctrl+c and do conversion in the read callback
+  * input: Fix sizes of input/read buffers
+  * api: Add vim_input function and mark vim_feedkeys as deferred
+  * travis: Make sure valgrind report is shown on test failures
+
+  [ Justin M. Keyes ]
+  * fs.c: add FUNC_ATTR_NONNULL_ALL to all functions
+
+  [ Kartik Agaram ]
+  * CONTRIBUTING.md: more guidance on cosmetic changes #1346
+
+  [ Scott Prager ]
+  * Mark patch 427 as included. (#1357)
+
+  [ Stefan Hoffmann ]
+  * unittest: fix handling of pragma pack in `cimport`
+  * unittest: increase number of retries in cimport
+
+  [ Florian Walch ]
+  * CONTRIBUTING.md: Add link to CLA.
+
+  [ Eliseo Martínez ]
+  * Fix python setup: Report errors.
+  * Fix python setup: Make sure python version on user's path is picked.
+  * Fix python setup: Fix issue for users not using python.
+
+  [ zeertzjq ]
+  * fix(screen): do not do syntax highlighting at filler or folded lines (#17818)
+
+ -- xbmc <xbmc@ate.cx>  Tue, 22 Mar 2022 20:25:49 -0400
+
+neovim (0.7.0~ubuntu1+git20220320161115-c1a5b03-0ed8333) hirsute; urgency=medium
+
+  [ Javier López ]
+  * docs: properly escape to avoid doxygen weirdness
+
+  [ Qosmio ]
+  * add deb packaging
+
+  [ Christian Clason ]
+  * vim-patch:47c532e2bc55 (#17780)
+
+  [ Sean Dewar ]
+  * fix(termdebug): handle exiting during startup properly (#16790)
+
+  [ bfredl ]
+  * feat(ui): allow conceal to be defined in decorations
+
+  [ Tim Pope ]
+  * fix(lsp): set tabSize from 'shiftwidth', not 'softtabstop' (#17787)
+
+ -- xbmc <xbmc@ate.cx>  Sun, 20 Mar 2022 16:12:39 -0400
+
+neovim (0.7.0~ubuntu1+git20220320123111-54f15a9-60b9bf6) hirsute; urgency=medium
+
+  [ Thiago de Arruda ]
+  * Import vim from changeset v5628:c9cad40b4181
+
+  [ aph ]
+  * Fix build on OSX/Archlinux and add README
+
+  [ Thiago de Arruda ]
+  * Remove more #ifdef dead code
+  * Automate libuv download and build
+  * Set vim binary as default make target
+  * Wrap calls to 'get_mess_env' into LIBINTL #ifdefs
+
+  [ aph ]
+  * fix build on OSX
+
+  [ Thiago de Arruda ]
+  * Document plans for the project
+  * Fix some typos in README
+  * Quote GUI diagram
+  * Set language of first json-rpc block
+  * Update documentation
+  * Add fundraiser link
+
+  [ Joshua Johnson ]
+  * Fix spelling
+
+  [ davertron ]
+  * Fix misspellings/grammar in README
+
+  [ Kornel Lugosi ]
+  * Add dependency install instructions for OsX
+
+  [ mmcdole ]
+  * Fix spelling mistakes in README.md
+
+  [ Meck ]
+  * Fix cmake link in README
+
+  [ Stephen Becker IV ]
+  * Update README.md
+  * Update README.md
+
+  [ matveyt ]
+  * fix(translation): po file for Russian (#17767)
+
+  [ Xiretza ]
+  * docs: reword description for nvim_buf_line_count() (#17766)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.2716: the equivalent class regexp is missing some characters
+  * vim-patch:8.2.4546: duplicate #undef
+  * vim-patch:8.2.4593: unnecessary call to redraw_later() (#17775)
+  * refactor(tinput_wait_enqueue): use rbuffer_read() when pasting (#17754)
+  * fix(api, lua): return NIL on failure to find converted function (#17779)
+
+  [ Gregory Anders ]
+  * feat(api): remove Lua autocommand callbacks when they return true (#17784)
+
+ -- xbmc <xbmc@ate.cx>  Sun, 20 Mar 2022 01:23:09 -0400
+
+neovim (0.7.0~ubuntu1+git20220317150114-26eabac-2aa1df8) hirsute; urgency=medium
+
+  * UNRELEASED
+
+ -- xbmc <xbmc@ate.cx>  Thu, 17 Mar 2022 16:38:48 -0400
+
+neovim (0.7.0~ubuntu1+git20220311194048-53c2e30-c0ceb77) hirsute; urgency=medium
+
+  [ Dundar Göc ]
+  * chore(lgtm): ignore "__eq__ not overridden" warning
+  * chore(lgtm): fix "empty block without comment" warnings
+
+  [ bfredl ]
+  * feat(lua): handle lazy submodules in `:lua vim.` wildmenu completion
+
+  [ zeertzjq ]
+  * feat(api): relax statusline fillchar width check
+
+  [ kylo252 ]
+  * vim-patch:8.1.2005: the regexp.c file is too big
+
+  [ zeertzjq ]
+  * chore(regexp.c): correctly align META_flags (#17668)
+
+  [ dundargoc ]
+  * chore: fix typos (#17331)
+
+  [ Dundar Göc ]
+  * refactor(uncrustify): disable uncrustify for misformatted code sections
+  * refactor(uncrustify): format all c files
+  * ci: remove fail character from fail function
+  * ci: remove variable NVIM_TEST_CURRENT_SUITE
+  * ci: remove variable FAIL_SUMMARY
+  * ci: remove function run_suite
+  * ci: refactor and simplify CI process
+
+  [ zeertzjq ]
+  * vim-patch:8.2.3949: using freed memory with /\%V
+  * vim-patch:8.2.3950: going beyond the end of the line with /\%V
+  * test: add a test for #17489
+
+  [ Christian Clason ]
+  * build(deps): bump libuv to 1.44.1
+
+  [ Lewis Russell ]
+  * refactor(decorations): move provider code
+  * refactor(decorations): unglobal decor_providers
+
+  [ Dundar Göc ]
+  * refactor: fix all clint warnings from buffer.c
+
+  [ dundargoc ]
+  * fix(coverity): dead code and operands don't affect result  #17662
+
+  [ zeertzjq ]
+  * vim-patch:8.2.4440: crash with specific regexp pattern and string
+  * vim-patch:8.2.4443: regexp pattern test fails on Mac
+
+  [ Charlie Groves ]
+  * feat(remote): add basic --remote support
+  * fix(remote): make compile again
+  * test(remote): add tests for --remote
+  * docs(remote): restore remote.txt from removal in f2205b83c553367a76b6cad
+  * docs(remote): update remote.txt for current nvim implementation
+  * fix(remote): report on missing wait commands, typecheck lua results
+  * fix(remote): report connection error, missing return values
+  * fix(remote): respect silent in error reporting
+  * fix(remote): use STATIC_CSTR_AS_STRING
+
+  [ dundargoc ]
+  * docs: remove "not in vi" notes (#17678)
+
+  [ zeertzjq ]
+  * vim-patch:partial:a2baa73d1d33 (#17675)
+
+ -- xbmc <xbmc@ate.cx>  Fri, 11 Mar 2022 19:42:30 -0500
+
+neovim (0.7.0~ubuntu1+git20220309151729-7b07b15-c6be769) hirsute; urgency=medium
+
+  [ bfredl ]
+  * Merge pull request #17567 from bfredl/preload
+
+  [ Jaehwang Jung ]
+  * fix(autocmd): clean up autocmds only when needed (#17593)
+
+  [ zeertzjq ]
+  * chore(autocmd): move comment to the right place
+
+  [ Dundar Göc ]
+  * ci(reviews): update reviewers
+  * revert: "build(deps): bump libuv to 1.43.0+7ae0c95"
+
+  [ Lewis Russell ]
+  * feat(decorations): support signs
+
+  [ James McCoy ]
+  * Merge pull request #17597 from dundargoc/build/cmake/fix-warnings
+
+  [ zeertzjq ]
+  * docs(lua): reference runtime/lua/vim/_editor.lua
+
+  [ Michael Lingelbach ]
+  * fix(lsp): handle insertion of previous line (#17618)
+
+  [ James McCoy ]
+  * ci(bsd): install gdb to get backtraces from cores
+
+  [ Gregory Anders ]
+  * feat(api): add 'buffer' argument to nvim_get_autocmds (#17594)
+
+  [ James McCoy ]
+  * test(sr.ht): skip luamod-dev test which crashes nvim
+
+  [ Kirill Chibisov ]
+  * fix(api): highlight attribute for underline
+
+  [ Lewis Russell ]
+  * refactor(signcol): smarter invalidation (#17533)
+
+  [ Dundar Göc ]
+  * ci(clint): remove "Unknown NOLINT error category" warning
+  * refactor: remove redundant casts
+  * ci(openbsd): use latest image
+
+  [ zeertzjq ]
+  * vim-patch:8.2.3739: in wrong directory when using win_execute() with 'acd' set
+  * vim-patch:8.2.3745: autochdir test fails without the +channel feature
+  * vim-patch:8.2.3920: restoring directory after using another window is inefficient
+  * vim-patch:8.2.4060: win_execute() slow on systems where getcwd()/chdir() is slow
+  * vim-patch:8.2.4513: window-local directory is not applied if 'acd' fails
+  * test(autochdir_spec): use better patterns
+  * test: add a test for #17609
+
+  [ bfredl ]
+  * refactor(lua): make vim submodule lazy loading declarative
+
+  [ Matthieu Coudron ]
+  * chore(flake): bump flake (#17632)
+
+  [ bfredl ]
+  * fix(lua): don't use nlua_error when exiting early
+
+  [ Dundar Göc ]
+  * ci(freebsd): use image freebsd/latest
+  * ci: document the purpose of some non-obvious jobs
+
+  [ Christian Clason ]
+  * build(deps): bump libuv to 1.44.0 (#17613)
+  * build(deps): bump tree-sitter to 0.20.6 (#17587)
+
+  [ Dundar Göc ]
+  * ci(macos): minimize log output from brew update
+
+  [ zeertzjq ]
+  * ci(freebsd): enable oldtests
+  * vim-patch:8.2.4520: using wrong highlight for cursor line number
+  * test: add a Lua screen test for CursorLineNr in diff mode
+
+  [ Dhruv Manilawala ]
+  * feat(api): autocmd `group` can be either name or id (#17559)
+
+  [ Christian Clason ]
+  * chore(aucmd): remove left-over debug log (#17649)
+
+  [ TJ DeVries ]
+  * fix: do not pass aucmd to the callback (#17650)
+
+  [ Sean Dewar ]
+  * fix(line continuation): set growsize to correct value (#17655)
+
+  [ Lewis Russell ]
+  * fix(extmarks): fix signs
+
+  [ zeertzjq ]
+  * vim-patch:8.2.0997: cannot execute a register containing line continuation
+
+  [ VVKot ]
+  * vim-patch:8.1.0748: using sprintf() instead of semsg()
+
+  [ zeertzjq ]
+  * refactor(ops): use op_yank_reg() instead of op_yank() when deleting
+  * vim-patch:8.1.0999: use register one too often and not properly tested
+
+  [ Christian Clason ]
+  * vim-patch:partial 1588bc8ebee2 (#17656)
+
+  [ Sean Dewar ]
+  * vim-patch:partial 1588bc8ebee2 (#17657)
+
+  [ Dundar Göc ]
+  * chore(stripdecls): remove unused and no longer functional script
+
+  [ kylo252 ]
+  * chore: align clang-format configuration with clint
+
+ -- xbmc <xbmc@ate.cx>  Wed, 09 Mar 2022 15:19:34 -0500
+
+neovim (0.7.0~ubuntu1+git20220309002157-e2742da-b3db8da) hirsute; urgency=medium
+
+  [ bfredl ]
+  * Merge pull request #17567 from bfredl/preload
+
+  [ Jaehwang Jung ]
+  * fix(autocmd): clean up autocmds only when needed (#17593)
+
+  [ zeertzjq ]
+  * chore(autocmd): move comment to the right place
+
+  [ Dundar Göc ]
+  * ci(reviews): update reviewers
+  * revert: "build(deps): bump libuv to 1.43.0+7ae0c95"
+
+  [ Lewis Russell ]
+  * feat(decorations): support signs
+
+  [ James McCoy ]
+  * Merge pull request #17597 from dundargoc/build/cmake/fix-warnings
+
+  [ zeertzjq ]
+  * docs(lua): reference runtime/lua/vim/_editor.lua
+
+  [ Michael Lingelbach ]
+  * fix(lsp): handle insertion of previous line (#17618)
+
+  [ James McCoy ]
+  * ci(bsd): install gdb to get backtraces from cores
+
+  [ Gregory Anders ]
+  * feat(api): add 'buffer' argument to nvim_get_autocmds (#17594)
+
+  [ James McCoy ]
+  * test(sr.ht): skip luamod-dev test which crashes nvim
+
+  [ Kirill Chibisov ]
+  * fix(api): highlight attribute for underline
+
+  [ Lewis Russell ]
+  * refactor(signcol): smarter invalidation (#17533)
+
+  [ Dundar Göc ]
+  * ci(clint): remove "Unknown NOLINT error category" warning
+  * refactor: remove redundant casts
+  * ci(openbsd): use latest image
+
+  [ zeertzjq ]
+  * vim-patch:8.2.3739: in wrong directory when using win_execute() with 'acd' set
+  * vim-patch:8.2.3745: autochdir test fails without the +channel feature
+  * vim-patch:8.2.3920: restoring directory after using another window is inefficient
+  * vim-patch:8.2.4060: win_execute() slow on systems where getcwd()/chdir() is slow
+  * vim-patch:8.2.4513: window-local directory is not applied if 'acd' fails
+  * test(autochdir_spec): use better patterns
+  * test: add a test for #17609
+
+  [ bfredl ]
+  * refactor(lua): make vim submodule lazy loading declarative
+
+  [ Matthieu Coudron ]
+  * chore(flake): bump flake (#17632)
+
+  [ bfredl ]
+  * fix(lua): don't use nlua_error when exiting early
+
+  [ Dundar Göc ]
+  * ci(freebsd): use image freebsd/latest
+  * ci: document the purpose of some non-obvious jobs
+
+  [ Christian Clason ]
+  * build(deps): bump libuv to 1.44.0 (#17613)
+  * build(deps): bump tree-sitter to 0.20.6 (#17587)
+
+  [ Dundar Göc ]
+  * ci(macos): minimize log output from brew update
+
+  [ zeertzjq ]
+  * ci(freebsd): enable oldtests
+  * vim-patch:8.2.4520: using wrong highlight for cursor line number
+  * test: add a Lua screen test for CursorLineNr in diff mode
+
+  [ Dhruv Manilawala ]
+  * feat(api): autocmd `group` can be either name or id (#17559)
+
+  [ Christian Clason ]
+  * chore(aucmd): remove left-over debug log (#17649)
+
+  [ TJ DeVries ]
+  * fix: do not pass aucmd to the callback (#17650)
+
+  [ Sean Dewar ]
+  * fix(line continuation): set growsize to correct value (#17655)
+
+  [ zeertzjq ]
+  * vim-patch:8.2.0997: cannot execute a register containing line continuation
+
+ -- xbmc <xbmc@ate.cx>  Wed, 09 Mar 2022 00:25:47 -0500
+
+neovim (0.7.0~ubuntu1+git20220305235014-f889191-950af51) hirsute; urgency=medium
+
+  [ bfredl ]
+  * Merge pull request #17567 from bfredl/preload
+
+  [ James McCoy ]
+  * Merge pull request #17597 from dundargoc/build/cmake/fix-warnings
+
+ -- xbmc <xbmc@ate.cx>  Sun, 06 Mar 2022 00:21:35 -0500
+
+neovim (0.7.0~ubuntu1+git202203032100-e23af71-9a6fc11~ubuntu21.04.1) hirsute; urgency=medium
+
+  * upstream
+
+ -- xbmc <xbmc@ate.cx>  Sun, 06 Mar 2022 00:12:37 -0500
+
+neovim (0.7.0~ubuntu1+git202201270047-20482a2b8-dd05b3569-7e71277fb~ubuntu21.04.1) hirsute; urgency=low
+
+  * Auto build.
+
+ -- Launchpad Package Builder <noreply@launchpad.net>  Thu, 27 Jan 2022 00:47:57 +0000
+
+neovim (0.7.0~ubuntu1-1) jammy; urgency=medium
+
+  * Bump version to 0.7.0
+
+ -- James McCoy <jamessan@debian.org>  Fri, 31 Dec 2021 12:48:06 -0500
+
+neovim (0.6.0~ubuntu1) impish; urgency=medium
+
+  * Bump version to 0.6.0
+
+ -- James McCoy <jamessan@debian.org>  Mon, 16 Aug 2021 07:33:20 -0400
+
+neovim (0.5.0+ubuntu2) focal; urgency=medium
+
+  * Use Luajit on supported architectures
+
+ -- James McCoy <jamessan@debian.org>  Mon, 07 Sep 2020 23:09:54 -0400
+
+neovim (0.5.0+ubuntu1) disco; urgency=medium
+
+  * Update version number for current master branch version.
+
+ -- Florian Walch <florian+launchpad@fwalch.com>  Tue, 01 Oct 2019 12:41:23 +0200
+
+neovim (0.4.0+ubuntu4) disco; urgency=medium
+
+  * Switch back to using Lua instead of LuaJIT, fixing ARM64 build
+
+ -- Florian Walch <florian+launchpad@fwalch.com>  Sun, 21 Jul 2019 19:32:30 +0200
+
+neovim (0.4.0+ubuntu3) disco; urgency=medium
+
+  * debian/control: Change Lua dependencies to LuaJIT
+  * local.mk: Prefer LuaJIT over Lua
+
+ -- Florian Walch <florian+launchpad@fwalch.com>  Sat, 06 Jul 2019 12:28:20 +0200
+
+neovim (0.4.0+ubuntu2) disco; urgency=medium
+
+  * local.mk: Use bundled luv
+
+ -- Florian Walch <florian+launchpad@fwalch.com>  Tue, 11 Jun 2019 11:25:52 +0200
+
+neovim (0.4.0+ubuntu1) disco; urgency=medium
+
+  * debian/rules: Remove jemalloc-specific code, since jemalloc isn't used
+    anymore
+
+ -- James McCoy <jamessan@debian.org>  Sun, 20 Jan 2019 15:30:05 -0500
+
+neovim (0.3.1+ubuntu2) disco; urgency=medium
+
+  * Fix version string so it sorts newer than the stable release.
+
+ -- James McCoy <jamessan@debian.org>  Mon, 19 Nov 2018 09:33:10 -0500
+
+neovim (0.3.1~ubuntu1) disco; urgency=medium
+
+  * Update version number for current upstream release.
+
+ -- James McCoy <jamessan@debian.org>  Mon, 05 Nov 2018 21:01:46 -0500
+
+neovim (0.3.0~ubuntu1) cosmic; urgency=medium
+
+  * Update version number for current upstream release.
+
+ -- James McCoy <jamessan@debian.org>  Wed, 04 Jul 2018 21:32:44 -0400
+
+neovim (0.2.2ubuntu2) precise; urgency=low
+
+  * Add Breaks/Replaces for neovim-runtime to ease switching between the
+    unstable PPA and the stable PPA/Ubuntu package.
+
+ -- James McCoy <jamessan@debian.org>  Tue, 23 Jan 2018 19:36:26 -0500
+
+neovim (0.2.2ubuntu1) precise; urgency=low
+
+  * Update version number for current upstream release.
+
+ --  <florian+launchpad@fwalch.com>  Mon, 01 Jan 2018 16:46:04 +0000
+
+neovim (0.2.0ubuntu1) precise; urgency=low
+
+  * Update version number for current upstream release.
+
+ --  <florian+launchpad@fwalch.com>  Wed, 03 May 2017 20:26:04 +0000
+
+neovim (0.1.7ubuntu1) precise; urgency=low
+
+  * Update version number for current upstream release.
+
+ --  <florian+launchpad@fwalch.com>  Tue, 10 Jan 2017 19:07:15 +0000
+
+neovim (0.1.5ubuntu1) precise; urgency=low
+
+  * Update version number for current upstream release.
+
+ --  <florian+launchpad@fwalch.com>  Mon, 22 Aug 2016 21:49:15 +0000
+
+neovim (0.1.4ubuntu1) precise; urgency=low
+
+  * Update version number for current upstream release.
+
+ --  <florian+launchpad@fwalch.com>  Tue, 31 May 2016 17:25:15 +0000
+
+neovim (0.1.2ubuntu1) precise; urgency=low
+
+  * New upstream release.
+
+ --  <florian+launchpad@fwalch.com>  Tue, 09 Feb 2016 09:55:15 +0000
+
+neovim (0.1.1ubuntu1) precise; urgency=low
+
+  * New upstream release.
+
+ --  <florian+launchpad@fwalch.com>  Sat, 12 Dec 2015 00:18:03 +0000
+
+neovim (0.1.0ubuntu1) precise; urgency=low
+
+  * New upstream release.
+
+ --  <florian+launchpad@fwalch.com>  Sun, 08 Nov 2015 19:34:42 +0000
+
+neovim (0.0.0) precise; urgency=low
+
+  * Initial unstable package release.
+
+ --  <florian+launchpad@fwalch.com>  Thu, 11 Dec 2014 14:04:57 +0000
